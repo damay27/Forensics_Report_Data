@@ -2800,3 +2800,165 @@
 2020-03-11 21:05:30 trigproc libc-bin:amd64 2.27-3ubuntu1 <none>
 2020-03-11 21:05:30 status half-configured libc-bin:amd64 2.27-3ubuntu1
 2020-03-11 21:05:30 status installed libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:28:08 startup archives unpack
+2020-04-27 03:28:08 upgrade bsdutils:amd64 1:2.31.1-0.4ubuntu3.5 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 status half-configured bsdutils:amd64 1:2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status unpacked bsdutils:amd64 1:2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status half-installed bsdutils:amd64 1:2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status half-installed bsdutils:amd64 1:2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status unpacked bsdutils:amd64 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 status unpacked bsdutils:amd64 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 startup packages configure
+2020-04-27 03:28:08 configure bsdutils:amd64 1:2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:08 status unpacked bsdutils:amd64 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 status half-configured bsdutils:amd64 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 status installed bsdutils:amd64 1:2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 startup archives unpack
+2020-04-27 03:28:08 upgrade libuuid1:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:08 status triggers-pending libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:28:08 status half-configured libuuid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status unpacked libuuid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:08 status half-installed libuuid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libuuid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libuuid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status unpacked libuuid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup packages configure
+2020-04-27 03:28:09 configure libuuid1:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:09 status unpacked libuuid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libuuid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status installed libuuid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup archives unpack
+2020-04-27 03:28:09 upgrade libblkid1:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libblkid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libblkid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libblkid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libblkid1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libblkid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status unpacked libblkid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup packages configure
+2020-04-27 03:28:09 configure libblkid1:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:09 status unpacked libblkid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libblkid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status installed libblkid1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup archives unpack
+2020-04-27 03:28:09 upgrade libfdisk1:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libfdisk1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libfdisk1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libfdisk1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libfdisk1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libfdisk1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status unpacked libfdisk1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup packages configure
+2020-04-27 03:28:09 configure libfdisk1:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:09 status unpacked libfdisk1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libfdisk1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status installed libfdisk1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup archives unpack
+2020-04-27 03:28:09 upgrade libmount1:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libmount1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libmount1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libmount1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libmount1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libmount1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status unpacked libmount1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup packages configure
+2020-04-27 03:28:09 configure libmount1:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:09 status unpacked libmount1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libmount1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status installed libmount1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup archives unpack
+2020-04-27 03:28:09 upgrade libsmartcols1:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libsmartcols1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libsmartcols1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libsmartcols1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status half-installed libsmartcols1:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:09 status unpacked libsmartcols1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status unpacked libsmartcols1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup packages configure
+2020-04-27 03:28:09 configure libsmartcols1:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:09 status unpacked libsmartcols1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status half-configured libsmartcols1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 status installed libsmartcols1:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:09 startup archives unpack
+2020-04-27 03:28:10 upgrade fdisk:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 status half-configured fdisk:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status unpacked fdisk:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status half-installed fdisk:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status half-installed fdisk:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status unpacked fdisk:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 status unpacked fdisk:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 startup packages configure
+2020-04-27 03:28:10 configure fdisk:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:10 status unpacked fdisk:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 status half-configured fdisk:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 status installed fdisk:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 startup archives unpack
+2020-04-27 03:28:10 upgrade util-linux:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:10 status half-configured util-linux:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:10 status half-installed util-linux:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:11 status half-installed util-linux:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:11 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:11 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:11 startup packages configure
+2020-04-27 03:28:11 configure util-linux:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:11 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:11 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status unpacked util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status half-configured util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status installed util-linux:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 startup archives unpack
+2020-04-27 03:28:12 upgrade mount:amd64 2.31.1-0.4ubuntu3.5 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status half-configured mount:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:12 status unpacked mount:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:12 status half-installed mount:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:12 status half-installed mount:amd64 2.31.1-0.4ubuntu3.5
+2020-04-27 03:28:12 status unpacked mount:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 status unpacked mount:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:12 upgrade gcc-8-base:amd64 8.3.0-26ubuntu1~18.04 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 status half-configured gcc-8-base:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status unpacked gcc-8-base:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status half-installed gcc-8-base:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status half-installed gcc-8-base:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status unpacked gcc-8-base:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 status unpacked gcc-8-base:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 startup packages configure
+2020-04-27 03:28:12 configure gcc-8-base:amd64 8.4.0-1ubuntu1~18.04 <none>
+2020-04-27 03:28:12 status unpacked gcc-8-base:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 status half-configured gcc-8-base:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 status installed gcc-8-base:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 startup archives unpack
+2020-04-27 03:28:12 upgrade libstdc++6:amd64 8.3.0-26ubuntu1~18.04 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:12 status half-configured libstdc++6:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status unpacked libstdc++6:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status half-installed libstdc++6:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:12 status half-installed libstdc++6:amd64 8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:13 status unpacked libstdc++6:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status unpacked libstdc++6:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 startup packages configure
+2020-04-27 03:28:13 configure libstdc++6:amd64 8.4.0-1ubuntu1~18.04 <none>
+2020-04-27 03:28:13 status unpacked libstdc++6:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status half-configured libstdc++6:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status installed libstdc++6:amd64 8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 startup archives unpack
+2020-04-27 03:28:13 upgrade libgcc1:amd64 1:8.3.0-26ubuntu1~18.04 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status half-configured libgcc1:amd64 1:8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:13 status unpacked libgcc1:amd64 1:8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:13 status half-installed libgcc1:amd64 1:8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:13 status half-installed libgcc1:amd64 1:8.3.0-26ubuntu1~18.04
+2020-04-27 03:28:13 status unpacked libgcc1:amd64 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status unpacked libgcc1:amd64 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 startup packages configure
+2020-04-27 03:28:13 configure libgcc1:amd64 1:8.4.0-1ubuntu1~18.04 <none>
+2020-04-27 03:28:13 status unpacked libgcc1:amd64 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status half-configured libgcc1:amd64 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 status installed libgcc1:amd64 1:8.4.0-1ubuntu1~18.04
+2020-04-27 03:28:13 startup packages configure
+2020-04-27 03:28:13 configure mount:amd64 2.31.1-0.4ubuntu3.6 <none>
+2020-04-27 03:28:13 status unpacked mount:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:13 status half-configured mount:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:13 status installed mount:amd64 2.31.1-0.4ubuntu3.6
+2020-04-27 03:28:13 trigproc libc-bin:amd64 2.27-3ubuntu1 <none>
+2020-04-27 03:28:13 status half-configured libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:28:13 status installed libc-bin:amd64 2.27-3ubuntu1

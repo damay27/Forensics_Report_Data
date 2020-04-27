@@ -738,7 +738,7 @@ Original-Maintainer: Gerrit Pape <pape@smarden.org>
 Homepage: http://gondor.apana.org.au/~herbert/dash/
 
 Package: mount
-Status: install ok installed
+Status: install ok unpacked
 Priority: required
 Section: admin
 Installed-Size: 370
@@ -747,6 +747,7 @@ Architecture: amd64
 Multi-Arch: foreign
 Source: util-linux
 Version: 2.31.1-0.4ubuntu3.6
+Config-Version: 2.31.1-0.4ubuntu3.5
 Replaces: bash-completion (<< 1:2.1-4.3~)
 Depends: util-linux (>= 2.30.1-0ubuntu4~)
 Pre-Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.17), libmount1 (>= 2.30.2), libsmartcols1 (>= 2.27~rc1)
@@ -1355,7 +1356,7 @@ Original-Maintainer: Craig Small <csmall@debian.org>
 
 Package: libc-bin
 Essential: yes
-Status: install ok installed
+Status: install ok triggers-pending
 Priority: required
 Section: libs
 Installed-Size: 3631
@@ -1382,6 +1383,7 @@ Description: GNU C Library: Binaries
   * ldd, ldconfig: print/configure shared library dependencies
   * locale, localedef: show/generate locale definitions
   * tzselect, zdump, zic: select/dump/compile time zones
+Triggers-Pending: ldconfig
 Homepage: https://www.gnu.org/software/libc/libc.html
 Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 

@@ -16,3 +16,8 @@ End-Date: 2020-03-11  21:05:30
 
 Start-Date: 2020-03-11  21:05:48
 End-Date: 2020-03-11  21:05:48
+
+Start-Date: 2020-04-27  03:28:08
+Commandline: apt upgrade
+Upgrade: fdisk:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libfdisk1:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libmount1:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), gcc-8-base:amd64 (8.3.0-26ubuntu1~18.04, 8.4.0-1ubuntu1~18.04), util-linux:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libgcc1:amd64 (1:8.3.0-26ubuntu1~18.04, 1:8.4.0-1ubuntu1~18.04), mount:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libblkid1:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libuuid1:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), libsmartcols1:amd64 (2.31.1-0.4ubuntu3.5, 2.31.1-0.4ubuntu3.6), bsdutils:amd64 (1:2.31.1-0.4ubuntu3.5, 1:2.31.1-0.4ubuntu3.6), libstdc++6:amd64 (8.3.0-26ubuntu1~18.04, 8.4.0-1ubuntu1~18.04)
+End-Date: 2020-04-27  03:28:13
