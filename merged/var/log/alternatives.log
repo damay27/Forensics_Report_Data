@@ -27,3 +27,7 @@ update-alternatives 2020-03-11 21:05:18: run with --remove pager /usr/bin/pg
 update-alternatives 2020-03-11 21:05:30: run with --install /usr/bin/w w /usr/bin/w.procps 50 --slave /usr/share/man/man1/w.1.gz w.1.gz /usr/share/man/man1/w.procps.1.gz
 update-alternatives 2020-04-27 03:28:12: run with --install /usr/bin/pager pager /bin/more 50 --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/more.1.gz
 update-alternatives 2020-04-27 03:28:12: run with --remove pager /usr/bin/pg
+update-alternatives 2020-04-27 03:29:02: run with --install /usr/bin/editor editor /bin/nano 40 --slave /usr/share/man/man1/editor.1.gz editor.1.gz /usr/share/man/man1/nano.1.gz
+update-alternatives 2020-04-27 03:29:02: link group editor updated to point to /bin/nano
+update-alternatives 2020-04-27 03:29:02: run with --install /usr/bin/pico pico /bin/nano 10 --slave /usr/share/man/man1/pico.1.gz pico.1.gz /usr/share/man/man1/nano.1.gz
+update-alternatives 2020-04-27 03:29:02: link group pico updated to point to /bin/nano

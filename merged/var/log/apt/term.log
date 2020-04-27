@@ -52,3 +52,15 @@ Setting up libgcc1:amd64 (1:8.4.0-1ubuntu1~18.04) ...
 Setting up mount (2.31.1-0.4ubuntu3.6) ...
 Processing triggers for libc-bin (2.27-3ubuntu1) ...
 Log ended: 2020-04-27  03:28:13
+
+Log started: 2020-04-27  03:29:02
+Selecting previously unselected package nano.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4046 files and directories currently installed.)
+Preparing to unpack .../nano_2.9.3-2_amd64.deb ...
+Unpacking nano (2.9.3-2) ...
+Setting up nano (2.9.3-2) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+Log ended: 2020-04-27  03:29:02

@@ -738,7 +738,7 @@ Original-Maintainer: Gerrit Pape <pape@smarden.org>
 Homepage: http://gondor.apana.org.au/~herbert/dash/
 
 Package: mount
-Status: install ok unpacked
+Status: install ok installed
 Priority: required
 Section: admin
 Installed-Size: 370
@@ -747,7 +747,6 @@ Architecture: amd64
 Multi-Arch: foreign
 Source: util-linux
 Version: 2.31.1-0.4ubuntu3.6
-Config-Version: 2.31.1-0.4ubuntu3.5
 Replaces: bash-completion (<< 1:2.1-4.3~)
 Depends: util-linux (>= 2.30.1-0ubuntu4~)
 Pre-Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.17), libmount1 (>= 2.30.2), libsmartcols1 (>= 2.27~rc1)
@@ -1196,6 +1195,42 @@ Description: library for common error values and messages in GnuPG components
 Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 Homepage: https://www.gnupg.org/related_software/libgpg-error/
 
+Package: nano
+Status: install ok unpacked
+Priority: important
+Section: editors
+Installed-Size: 760
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 2.9.3-2
+Replaces: nano-tiny (<< 2.8.6-2), pico
+Depends: libc6 (>= 2.14), libncursesw5 (>= 6), libtinfo5 (>= 6)
+Suggests: spell
+Breaks: nano-tiny (<< 2.8.6-2)
+Conflicts: pico
+Conffiles:
+ /etc/nanorc newconffile
+Description: small, friendly text editor inspired by Pico
+ GNU nano is an easy-to-use text editor originally designed as a replacement
+ for Pico, the ncurses-based editor from the non-free mailer package Pine
+ (itself now available under the Apache License as Alpine).
+ .
+ However, GNU nano also implements many features missing in pico, including:
+  - undo/redo
+  - line numbering
+  - syntax coloring
+  - soft-wrapping of overlong lines
+  - selecting text by holding Shift
+  - interactive search and replace (with regular expression support)
+  - a go-to line (and column) command
+  - support for multiple file buffers
+  - auto-indentation
+  - tab completion of filenames and search terms
+  - toggling features while running
+  - and full internationalization support
+Original-Maintainer: Jordi Mallach <jordi@debian.org>
+Homepage: https://www.nano-editor.org/
+
 Package: base-files
 Essential: yes
 Status: install ok installed
@@ -1356,7 +1391,7 @@ Original-Maintainer: Craig Small <csmall@debian.org>
 
 Package: libc-bin
 Essential: yes
-Status: install ok triggers-pending
+Status: install ok installed
 Priority: required
 Section: libs
 Installed-Size: 3631
@@ -1383,7 +1418,6 @@ Description: GNU C Library: Binaries
   * ldd, ldconfig: print/configure shared library dependencies
   * locale, localedef: show/generate locale definitions
   * tzselect, zdump, zic: select/dump/compile time zones
-Triggers-Pending: ldconfig
 Homepage: https://www.gnu.org/software/libc/libc.html
 Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 

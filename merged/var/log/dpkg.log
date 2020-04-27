@@ -2962,3 +2962,14 @@
 2020-04-27 03:28:13 trigproc libc-bin:amd64 2.27-3ubuntu1 <none>
 2020-04-27 03:28:13 status half-configured libc-bin:amd64 2.27-3ubuntu1
 2020-04-27 03:28:13 status installed libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:29:02 startup archives unpack
+2020-04-27 03:29:02 install nano:amd64 <none> 2.9.3-2
+2020-04-27 03:29:02 status half-installed nano:amd64 2.9.3-2
+2020-04-27 03:29:02 status unpacked nano:amd64 2.9.3-2
+2020-04-27 03:29:02 status unpacked nano:amd64 2.9.3-2
+2020-04-27 03:29:02 startup packages configure
+2020-04-27 03:29:02 configure nano:amd64 2.9.3-2 <none>
+2020-04-27 03:29:02 status unpacked nano:amd64 2.9.3-2
+2020-04-27 03:29:02 status unpacked nano:amd64 2.9.3-2
+2020-04-27 03:29:02 status half-configured nano:amd64 2.9.3-2
+2020-04-27 03:29:02 status installed nano:amd64 2.9.3-2
