@@ -1,7 +1,0 @@
-Package: xz-utils
-Status: install reinstreq half-installed
-Priority: required
-Section: utils
-Architecture: amd64
-Multi-Arch: foreign
-Version: 5.2.2-1.3

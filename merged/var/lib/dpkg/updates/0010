@@ -1,7 +1,0 @@
-Package: libgdbm-compat4
-Status: install reinstreq half-installed
-Priority: optional
-Section: libs
-Architecture: amd64
-Multi-Arch: same
-Version: 1.14.1-6

@@ -1,7 +1,0 @@
-Package: manpages
-Status: install reinstreq half-installed
-Priority: standard
-Section: doc
-Architecture: all
-Multi-Arch: foreign
-Version: 4.15-1

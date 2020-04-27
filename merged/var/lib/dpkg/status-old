@@ -1,3 +1,42 @@
+Package: libquadmath0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 269
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.23)
+Description: GCC Quad-Precision Math Library
+ A library, which provides quad-precision mathematical functions on targets
+ supporting the __float128 datatype. The library is used to provide on such
+ targets the REAL(16) type in the GNU Fortran compiler.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libnpth0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: npth
+Version: 1.5-3
+Depends: libc6 (>= 2.17)
+Description: replacement for GNU Pth using system threads
+ nPth is a non-preemptive threads implementation using an API very
+ similar to the one known from GNU Pth. It has been designed as a
+ replacement of GNU Pth for non-ancient operating systems. In
+ contrast to GNU Pth it is based on the system's standard threads
+ implementation. Thus nPth allows the use of libraries which are not
+ compatible to GNU Pth.
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Homepage: https://www.gnupg.org/
+
 Package: fdisk
 Status: install ok installed
 Priority: important
@@ -90,6 +129,64 @@ Description: common error description library
 Homepage: http://e2fsprogs.sourceforge.net
 Original-Maintainer: Theodore Y. Ts'o <tytso@mit.edu>
 
+Package: libgomp1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 211
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.17)
+Breaks: gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Description: GCC OpenMP (GOMP) support library
+ GOMP is an implementation of OpenMP for the C, C++, and Fortran compilers
+ in the GNU Compiler Collection.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libatomic1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 41
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.14)
+Description: support library providing __atomic built-in functions
+ library providing __atomic built-in functions. When an atomic call cannot
+ be turned into lock-free instructions, GCC will make calls into this library.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: cpp
+Status: install ok installed
+Priority: optional
+Section: interpreters
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: allowed
+Source: gcc-defaults (1.176ubuntu2.3)
+Version: 4:7.4.0-1ubuntu2.3
+Depends: cpp-7 (>= 7.4.0-1~)
+Suggests: cpp-doc
+Conflicts: cpp-doc (<< 1:2.95.3)
+Description: GNU C preprocessor (cpp)
+ The GNU C preprocessor is a macro processor that is used automatically
+ by the GNU C compiler to transform programs before actual compilation.
+ .
+ This package has been separated from gcc for the benefit of those who
+ require the preprocessor but not the compiler.
+ .
+ This is a dependency package providing the default GNU C preprocessor.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
 Package: libapt-pkg5.0
 Status: install ok installed
 Priority: optional
@@ -139,6 +236,29 @@ Description: Dynamic library for security auditing
 Homepage: https://people.redhat.com/sgrubb/audit/
 Original-Maintainer: Laurent Bigonville <bigon@debian.org>
 
+Package: readline-common
+Status: install ok installed
+Priority: important
+Section: utils
+Installed-Size: 78
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: readline
+Version: 7.0-3
+Replaces: libreadline-common, libreadline4 (<< 4.3-16), libreadline5 (<< 5.0-11)
+Depends: dpkg (>= 1.15.4) | install-info
+Suggests: readline-doc
+Conflicts: libreadline-common, libreadline5 (<< 5.0-11)
+Description: GNU readline and history libraries, common files
+ The GNU readline library aids in the consistency of user interface
+ across discrete programs that need to provide a command line
+ interface.
+ .
+ The GNU history library provides a consistent user interface for
+ recalling lines of previously typed input.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
 Package: libtinfo5
 Status: install ok installed
 Priority: optional
@@ -159,6 +279,32 @@ Description: shared low-level terminfo library for terminal handling
  This package contains the shared low-level terminfo library.
 Homepage: https://invisible-island.net/ncurses/
 Original-Maintainer: Craig Small <csmall@debian.org>
+
+Package: manpages
+Status: install ok installed
+Priority: standard
+Section: doc
+Installed-Size: 1471
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 4.15-1
+Suggests: man-browser
+Breaks: manpages-dev (<< 4.13-3)
+Description: Manual pages about using a GNU/Linux system
+ This package contains GNU/Linux manual pages for these sections:
+  4 = Devices (e.g. hd, sd).
+  5 = File formats and protocols, syntaxes of several system
+      files (e.g. wtmp, /etc/passwd, nfs).
+  7 = Conventions and standards, macro packages, etc.
+      (e.g. nroff, ascii).
+ .
+ Sections 1, 6 and 8 are provided by the respective applications. This
+ package only includes the intro man page describing the section.
+ .
+ The man pages describe syntaxes of several system files.
+Original-Maintainer: Martin Schulze <joey@debian.org>
+Homepage: https://www.kernel.org/doc/man-pages/
 
 Package: perl-base
 Essential: yes
@@ -256,7 +402,7 @@ Original-Maintainer: Magnus Holmgren <holmgren@debian.org>
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
 
 Package: kmod
-Status: install ok unpacked
+Status: install ok installed
 Priority: important
 Section: admin
 Installed-Size: 232
@@ -267,14 +413,14 @@ Version: 24-1ubuntu3.2
 Depends: libc6 (>= 2.17), libkmod2 (= 24-1ubuntu3.2), lsb-base
 Breaks: oss-compat (= 4)
 Conffiles:
- /etc/depmod.d/ubuntu.conf newconffile
- /etc/init.d/kmod newconffile
- /etc/modprobe.d/blacklist-ath_pci.conf newconffile
- /etc/modprobe.d/blacklist-firewire.conf newconffile
- /etc/modprobe.d/blacklist-framebuffer.conf newconffile
- /etc/modprobe.d/blacklist-rare-network.conf newconffile
- /etc/modprobe.d/blacklist.conf newconffile
- /etc/modprobe.d/iwlwifi.conf newconffile
+ /etc/depmod.d/ubuntu.conf 7c8439ef36b12e5f226b5dbfa20b8c2d
+ /etc/init.d/kmod 82698019c962069b438bd2a82d9fa1e7
+ /etc/modprobe.d/blacklist-ath_pci.conf d1da9bb08c2b0f56f3be93fd0e37946b
+ /etc/modprobe.d/blacklist-firewire.conf 9cc07a17e8e64f9cd35ff59c29debe69
+ /etc/modprobe.d/blacklist-framebuffer.conf 662be7eaefa6b67fcddb5d90981e1c29
+ /etc/modprobe.d/blacklist-rare-network.conf 8fb4b96124e461f53adceba9ca91f09a
+ /etc/modprobe.d/blacklist.conf 46378b3789cf6d2ea9da9276e1106f2c
+ /etc/modprobe.d/iwlwifi.conf f27bc645e93e20c8e532325d190ac8ee
 Description: tools for managing Linux kernel modules
  This package contains a set of programs for loading, inserting, and
  removing kernel modules for Linux.
@@ -319,6 +465,49 @@ Description: command-line interface parsing library
  It was originally inspired by the Multics SubSystem library.
 Homepage: http://e2fsprogs.sourceforge.net
 Original-Maintainer: Theodore Y. Ts'o <tytso@mit.edu>
+
+Package: libcc1-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 128
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.15), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Description: GCC cc1 plugin for GDB
+ libcc1 is a plugin for GDB.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: make
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 372
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: allowed
+Source: make-dfsg
+Version: 4.1-9.1ubuntu1
+Replaces: make-guile
+Depends: libc6 (>= 2.27)
+Suggests: make-doc
+Conflicts: make-guile
+Description: utility for directing compilation
+ GNU Make is a utility which controls the generation of executables
+ and other target files of a program from the program's source
+ files. It determines automatically which pieces of a large program
+ need to be (re)created, and issues the commands to (re)create
+ them. Make can be used to organize any task in which targets (files)
+ are to be automatically updated based on input files whenever the
+ corresponding input is newer --- it is not limited to building
+ computer programs. Indeed, Make is a general purpose dependency
+ solver.
+Original-Maintainer: Manoj Srivastava <srivasta@debian.org>
+Homepage: http://www.gnu.org/software/make/
 
 Package: liblzma5
 Status: install ok installed
@@ -471,6 +660,42 @@ Description: Miscellaneous utilities specific to Debian
  tempfile which
 Original-Maintainer: Clint Adams <clint@debian.org>
 
+Package: libwind0-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 204
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libc6 (>= 2.14), libcomerr2 (>= 1.01), libroken18-heimdal (>= 1.4.0+git20110226)
+Description: Heimdal Kerberos - stringprep implementation
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the stringprep library.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
+
+Package: libasan4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1441
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.23), libgcc1
+Description: AddressSanitizer -- a fast memory error detector
+ AddressSanitizer (ASan) is a fast memory error detector.  It finds
+ use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
 Package: libgcrypt20
 Status: install ok installed
 Priority: standard
@@ -494,6 +719,24 @@ Description: LGPL Crypto library - runtime library
  (Curve25519, sec256k1, GOST R 34.10-2001 and GOST R 34.10-2012, etc.)
 Homepage: http://directory.fsf.org/project/libgcrypt/
 Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+
+Package: gcc-7
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 27325
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 7.5.0-3ubuntu1~18.04
+Replaces: cpp-7 (<< 7.1.1-8), gccgo-7 (<< 7.5.0-3ubuntu1~18.04)
+Provides: c-compiler
+Depends: cpp-7 (= 7.5.0-3ubuntu1~18.04), gcc-7-base (= 7.5.0-3ubuntu1~18.04), libcc1-0 (>= 7.5.0-3ubuntu1~18.04), binutils (>= 2.30), libgcc-7-dev (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.15), libgcc1 (>= 1:3.0), libgmp10 (>= 2:5.0.1~), libisl19 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), libstdc++6 (>= 5), zlib1g (>= 1:1.1.4)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Suggests: gcc-7-multilib, gcc-7-doc (>= 7), gcc-7-locales (>= 7), libgcc1-dbg (>= 1:7.5.0-3ubuntu1~18.04), libgomp1-dbg (>= 7.5.0-3ubuntu1~18.04), libitm1-dbg (>= 7.5.0-3ubuntu1~18.04), libatomic1-dbg (>= 7.5.0-3ubuntu1~18.04), libasan4-dbg (>= 7.5.0-3ubuntu1~18.04), liblsan0-dbg (>= 7.5.0-3ubuntu1~18.04), libtsan0-dbg (>= 7.5.0-3ubuntu1~18.04), libubsan0-dbg (>= 7.5.0-3ubuntu1~18.04), libcilkrts5-dbg (>= 7.5.0-3ubuntu1~18.04), libmpx2-dbg (>= 7.5.0-3ubuntu1~18.04), libquadmath0-dbg (>= 7.5.0-3ubuntu1~18.04)
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 
 Package: libncursesw5
 Status: install ok installed
@@ -550,6 +793,24 @@ Description: GNU Bourne Again SHell
 Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
 Original-Maintainer: Matthias Klose <doko@debian.org>
 
+Package: libbinutils
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 3006
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.30-21ubuntu1~18.04.3
+Replaces: binutils (<< 2.29-6)
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.2.0), binutils-common (= 2.30-21ubuntu1~18.04.3)
+Breaks: binutils (<< 2.29-6)
+Description: GNU binary utilities (private shared library)
+ This package includes the private shared libraries libbfd and libopcodes.
+Homepage: https://www.gnu.org/software/binutils/
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
 Package: libuuid1
 Status: install ok installed
 Priority: optional
@@ -589,6 +850,111 @@ Description: Berkeley v5.3 Database Libraries [runtime]
  database library.
 Homepage: http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/overview/index.html
 Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+
+Package: build-essential
+Status: install ok unpacked
+Priority: optional
+Section: devel
+Installed-Size: 20
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 12.4ubuntu1
+Depends: libc6-dev | libc-dev, gcc (>= 4:7.2), g++ (>= 4:7.2), make, dpkg-dev (>= 1.17.11)
+Description: Informational list of build-essential packages
+ If you do not plan to build Debian packages, you don't need this
+ package.  Starting with dpkg (>= 1.14.18) this package is required
+ for building Debian packages.
+ .
+ This package contains an informational list of packages which are
+ considered essential for building Debian packages.  This package also
+ depends on the packages on that list, to make it easy to have the
+ build-essential packages installed.
+ .
+ If you have this package installed, you only need to install whatever
+ a package specifies as its build-time dependencies to build the
+ package.  Conversely, if you are determining what your package needs
+ to build-depend on, you can always leave out the packages this
+ package depends on.
+ .
+ This package is NOT the definition of what packages are
+ build-essential; the real definition is in the Debian Policy Manual.
+ This package contains merely an informational list, which is all
+ most people need.   However, if this package and the manual disagree,
+ the manual is correct.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: libldap-common
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 97
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: openldap
+Version: 2.4.45+dfsg-1ubuntu1.4
+Replaces: libldap-2.4-2 (<< 2.4.44+dfsg-1)
+Conffiles:
+ /etc/ldap/ldap.conf 0b3f4d19d88498314478273ce10b0a70
+Description: OpenLDAP common files for libraries
+ These are common files for the run-time libraries for the OpenLDAP
+ (Lightweight Directory Access Protocol) servers and clients.
+Homepage: http://www.openldap.org/
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+
+Package: g++-7
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 26062
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Provides: c++-compiler, c++abi2-dev
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), gcc-7 (= 7.5.0-3ubuntu1~18.04), libstdc++-7-dev (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.14), libgmp10 (>= 2:5.0.1~), libisl19 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), zlib1g (>= 1:1.1.4)
+Suggests: g++-7-multilib, gcc-7-doc (>= 7), libstdc++6-7-dbg (>= 7.5.0-3ubuntu1~18.04)
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libcilkrts5
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 143
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.6), libgcc1, libstdc++6
+Description: Intel Cilk Plus language extensions (runtime)
+ Intel Cilk Plus is an extension to the C and C++ languages to support
+ data and task parallelism.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libreadline7
+Status: install ok installed
+Priority: important
+Section: libs
+Installed-Size: 402
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: readline
+Version: 7.0-3
+Depends: readline-common, libc6 (>= 2.15), libtinfo5 (>= 6)
+Description: GNU readline and history libraries, run-time libraries
+ The GNU readline library aids in the consistency of user interface
+ across discrete programs that need to provide a command line
+ interface.
+ .
+ The GNU history library provides a consistent user interface for
+ recalling lines of previously typed input.
+Original-Maintainer: Matthias Klose <doko@debian.org>
 
 Package: debconf
 Status: install ok installed
@@ -651,6 +1017,25 @@ Description: utility to set/show the host name or domain name
  DNS name, and to display or set its hostname or NIS domain name.
 Original-Maintainer: Michael Meskes <meskes@debian.org>
 
+Package: libasn1-8-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 782
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libc6 (>= 2.14), libcomerr2 (>= 1.01), libroken18-heimdal (>= 1.4.0+git20110226)
+Description: Heimdal Kerberos - ASN.1 library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the ASN.1 parser required for Heimdal.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
+
 Package: mawk
 Status: install ok installed
 Priority: required
@@ -695,6 +1080,64 @@ Description: GNU compression utilities
  on files with names ending in '.gz', but can also decompress files ending
  in '.Z' created with 'compress'.
 Original-Maintainer: Bdale Garbee <bdale@gag.com>
+
+Package: libubsan0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 337
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.4), libgcc1, libstdc++6
+Description: UBSan -- undefined behaviour sanitizer (runtime)
+ UndefinedBehaviorSanitizer can be enabled via -fsanitize=undefined.
+ Various computations will be instrumented to detect undefined behavior
+ at runtime. Available for C and C++.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: libtsan0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1023
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.23), libgcc1 (>= 1:3.3)
+Description: ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
+ ThreadSanitizer (Tsan) is a data race detector for C/C++ programs.
+ The Linux and Mac versions are based on Valgrind.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gpgconf
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 384
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg (<< 2.1.21-4), gnupg-agent (<< 2.1.21-4)
+Depends: libassuan0 (>= 2.0.1), libc6 (>= 2.14), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libreadline7 (>= 6.0)
+Breaks: gnupg (<< 2.1.21-4), gnupg-agent (<< 2.1.21-4)
+Description: GNU privacy guard - core configuration utilities
+ GnuPG is GNU's tool for secure communication and data storage.
+ .
+ This package contains core utilities used by different tools in the
+ suite offered by GnuPG.  It can be used to programmatically edit
+ config files for tools in the GnuPG suite, to launch or terminate
+ per-user daemons (if installed), etc.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 
 Package: gpgv
 Status: install ok installed
@@ -763,6 +1206,90 @@ Description: POSIX-compliant shell
 Original-Maintainer: Gerrit Pape <pape@smarden.org>
 Homepage: http://gondor.apana.org.au/~herbert/dash/
 
+Package: libsasl2-modules-db
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: cyrus-sasl2
+Version: 2.1.27~101-g0780600+dfsg-3ubuntu2.1
+Depends: libc6 (>= 2.14), libdb5.3
+Description: Cyrus SASL - pluggable authentication modules (DB)
+ This is the Cyrus SASL API implementation, version 2.1. See package
+ libsasl2-2 and RFC 2222 for more information.
+ .
+ This package provides the DB plugin, which supports Berkeley DB lookups.
+Homepage: https://www.cyrusimap.org/
+Original-Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
+
+Package: gnupg
+Status: install ok unpacked
+Priority: optional
+Section: utils
+Installed-Size: 362
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg2 (<< 2.1.11-7+exp1)
+Depends: dirmngr (= 2.2.4-1ubuntu1.2), gnupg-l10n (= 2.2.4-1ubuntu1.2), gnupg-utils (= 2.2.4-1ubuntu1.2), gpg (= 2.2.4-1ubuntu1.2), gpg-agent (= 2.2.4-1ubuntu1.2), gpg-wks-client (= 2.2.4-1ubuntu1.2), gpg-wks-server (= 2.2.4-1ubuntu1.2), gpgsm (= 2.2.4-1ubuntu1.2), gpgv (= 2.2.4-1ubuntu1.2)
+Suggests: parcimonie, xloadimage
+Breaks: debsig-verify (<< 0.15), dirmngr (<< 2.2.4-1ubuntu1.2), gnupg2 (<< 2.1.11-7+exp1), libgnupg-interface-perl (<< 0.52-3), libgnupg-perl (<= 0.19-1), libmail-gnupg-perl (<= 0.22-1), monkeysphere (<< 0.38~), php-crypt-gpg (<= 1.4.1-1), python-apt (<= 1.1.0~beta4), python-gnupg (<< 0.3.8-3), python3-apt (<= 1.1.0~beta4), software-properties-common (<= 0.96.24.3)
+Description: GNU privacy guard - a free PGP replacement
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package contains the full suite of GnuPG tools for cryptographic
+ communications and data storage.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: linux-libc-dev
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 5364
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: linux
+Version: 4.15.0-96.97
+Replaces: linux-kernel-headers
+Provides: aufs-dev, linux-kernel-headers
+Conflicts: linux-kernel-headers
+Description: Linux Kernel Headers for development
+ This package provides headers from the Linux kernel.  These headers
+ are used by the installed headers for GNU glibc and other system
+ libraries. They are NOT meant to be used to build third-party modules for
+ your kernel. Use linux-headers-* packages for that.
+
+Package: libmpfr6
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1083
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: mpfr4
+Version: 4.0.1-1
+Depends: libc6 (>= 2.14), libgmp10
+Breaks: libgmp3 (<< 4.1.4-3), libmpc3 (<< 1.1.0-1~)
+Description: multiple precision floating-point computation
+ MPFR provides a library for multiple-precision floating-point computation
+ with correct rounding.  The computation is both efficient and has a
+ well-defined semantics. It copies the good ideas from the
+ ANSI/IEEE-754 standard for double-precision floating-point arithmetic
+ (53-bit mantissa).
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Homepage: http://www.mpfr.org/
+
 Package: mount
 Status: install ok installed
 Priority: required
@@ -783,6 +1310,25 @@ Description: tools for mounting and manipulating filesystems
  swapoff(8), and losetup(8) commands.
 Important: yes
 Original-Maintainer: LaMont Jones <lamont@debian.org>
+
+Package: libhcrypto4-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 270
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libasn1-8-heimdal (>= 1.4.0+git20110226), libc6 (>= 2.14), libheimbase1-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.4.0+git20110226)
+Description: Heimdal Kerberos - crypto library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the cryptographic library required for Heimdal.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
 
 Package: libgnutls30
 Status: install ok installed
@@ -817,6 +1363,36 @@ Description: GNU TLS library - main runtime library
 Homepage: http://www.gnutls.org/
 Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
 
+Package: libsasl2-2
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 148
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: cyrus-sasl2
+Version: 2.1.27~101-g0780600+dfsg-3ubuntu2.1
+Replaces: libsasl2
+Depends: libsasl2-modules-db (>= 2.1.27~101-g0780600+dfsg-3ubuntu2.1), libc6 (>= 2.15)
+Recommends: libsasl2-modules (>= 2.1.27~101-g0780600+dfsg-3ubuntu2.1)
+Breaks: postfix (<= 2.8.3-1), slapd (<= 2.4.25-3)
+Description: Cyrus SASL - authentication abstraction library
+ This is the Cyrus SASL API implementation, version 2.1.
+ .
+ SASL is the Simple Authentication and Security Layer, a method for
+ adding authentication support to connection-based protocols. To use
+ SASL, a protocol includes a command for identifying and
+ authenticating a user to a server and for optionally negotiating
+ protection of subsequent protocol interactions. If its use is
+ negotiated, a security layer is inserted between the protocol and the
+ connection. See RFC 2222 for more information.
+ .
+ Any of: ANONYMOUS, CRAM-MD5, DIGEST-MD5, GSSAPI (MIT or Heimdal
+ Kerberos 5), NTLM, OTP, PLAIN, or LOGIN can be used.
+Homepage: https://www.cyrusimap.org/
+Original-Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
+
 Package: libsystemd0
 Status: install ok installed
 Priority: optional
@@ -832,6 +1408,66 @@ Description: systemd utility library
  The libsystemd0 library provides interfaces to various systemd components.
 Homepage: https://www.freedesktop.org/wiki/Software/systemd
 Original-Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+
+Package: libdpkg-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 2020
+Origin: debian
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: debbugs://bugs.debian.org
+Architecture: all
+Multi-Arch: foreign
+Source: dpkg
+Version: 1.19.0.5ubuntu2.3
+Depends: perl, dpkg (>= 1.18.11)
+Recommends: libfile-fcntllock-perl, liblocale-gettext-perl, bzip2, xz-utils
+Suggests: debian-keyring, gnupg | gnupg2, gpgv | gpgv2, gcc | c-compiler, binutils, patch, git, bzr
+Breaks: dgit (<< 3.13~), patch (<< 2.7), pkg-kde-tools (<< 0.15.28~)
+Description: Dpkg perl modules
+ This package provides the perl modules used by the scripts
+ in dpkg-dev. They cover a wide range of functionality. Among them
+ there are the following public modules:
+ .
+  - Dpkg: core variables
+  - Dpkg::Arch: architecture handling functions
+  - Dpkg::Build::Info: build information functions
+  - Dpkg::BuildFlags: set, modify and query compilation build flags
+  - Dpkg::BuildOptions: parse and manipulate DEB_BUILD_OPTIONS
+  - Dpkg::BuildProfile: parse and manipulate build profiles
+  - Dpkg::Changelog: parse changelogs
+  - Dpkg::Changelog::Entry: represents a changelog entry
+  - Dpkg::Changelog::Parse: generic changelog parser for dpkg-parsechangelog
+  - Dpkg::Checksums: generate and parse checksums
+  - Dpkg::Compression: simple database of available compression methods
+  - Dpkg::Compression::Process: wrapper around compression tools
+  - Dpkg::Compression::FileHandle: transparently (de)compress files
+  - Dpkg::Conf: parse dpkg configuration files
+  - Dpkg::Control: parse and manipulate Debian control information
+    (.dsc, .changes, Packages/Sources entries, etc.)
+  - Dpkg::Control::Changelog: represent fields output by dpkg-parsechangelog
+  - Dpkg::Control::Fields: manage (list of known) control fields
+  - Dpkg::Control::Hash: parse and manipulate a block of RFC822-like fields
+  - Dpkg::Control::Info: parse files like debian/control
+  - Dpkg::Control::Tests: parse files like debian/tests/control
+  - Dpkg::Deps: parse and manipulate dependencies
+  - Dpkg::Exit: push, pop and run exit handlers
+  - Dpkg::Gettext: wrapper around Locale::gettext
+  - Dpkg::IPC: spawn sub-processes and feed/retrieve data
+  - Dpkg::Index: collections of Dpkg::Control (Packages/Sources files for
+    example)
+  - Dpkg::Interface::Storable: base object serializer
+  - Dpkg::Path: common path handling functions
+  - Dpkg::Source::Package: extract Debian source packages
+  - Dpkg::Substvars: substitute variables in strings
+  - Dpkg::Vendor: identify current distribution vendor
+  - Dpkg::Version: parse and manipulate Debian package versions
+ .
+ All the packages listed in Suggests or Recommends are used by some of the
+ modules.
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
 
 Package: libzstd1
 Status: install ok installed
@@ -851,6 +1487,40 @@ Description: fast lossless compression algorithm
  This package contains the shared library.
 Homepage: https://github.com/facebook/zstd
 Original-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+
+Package: gpg-agent
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 855
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg-agent (<< 2.1.21-4)
+Provides: gnupg-agent
+Depends: gpgconf (= 2.2.4-1ubuntu1.2), pinentry-curses | pinentry, libassuan0 (>= 2.5.1), libc6 (>= 2.17), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libnpth0 (>= 0.90)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Suggests: dbus-user-session, libpam-systemd, pinentry-gnome3, scdaemon
+Breaks: gnupg-agent (<< 2.1.21-4)
+Conffiles:
+ /etc/X11/Xsession.d/90gpg-agent fbb9ce5e8e4ba5727090f0aa51b61a82
+ /etc/logcheck/ignore.d.server/gpg-agent 040d545c7f33c0581fd2ae198dab1d7a
+Description: GNU privacy guard - cryptographic agent
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package contains the agent program gpg-agent which handles all
+ secret key material for OpenPGP and S/MIME use.  The agent also
+ provides a passphrase cache, which is used by pre-2.1 versions of
+ GnuPG for OpenPGP operations.  Without this package, trying to do
+ secret-key operations with any part of the modern GnuPG suite will
+ fail.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 
 Package: libc6
 Status: install ok installed
@@ -892,6 +1562,25 @@ Description: fdisk partitioning library
  the core of the fdisk, cfdisk, and sfdisk tools.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
 
+Package: libroken18-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 137
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libc6 (>= 2.16)
+Description: Heimdal Kerberos - roken support library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the library for roken support.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
+
 Package: libpcre3
 Status: install ok installed
 Priority: important
@@ -914,6 +1603,128 @@ Description: Old Perl 5 Compatible Regular Expression Library - runtime files
  .
  This package contains the runtime libraries.
 Original-Maintainer: Matthew Vernon <matthew@debian.org>
+
+Package: libksba8
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 259
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: libksba
+Version: 1.3.5-2
+Depends: libc6 (>= 2.14), libgpg-error0 (>= 1.14)
+Description: X.509 and CMS support library
+ KSBA (pronounced Kasbah) is a library to make X.509 certificates as
+ well as the CMS easily accessible by other applications.  Both
+ specifications are building blocks of S/MIME and TLS.
+ .
+ KSBA provides these subsystems: ASN.1 Parser, BER Decoder, BER
+ Encoder, Certificate Handling and CMS Handling.
+ .
+ This package contains the runtime library files.
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Homepage: http://www.gnupg.org/related_software/libksba/
+
+Package: perl-modules-5.26
+Status: install ok installed
+Priority: standard
+Section: perl
+Installed-Size: 18501
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: perl
+Version: 5.26.1-6ubuntu0.3
+Replaces: libansicolor-perl (<< 4.06), libarchive-tar-perl (<< 2.24), libattribute-handlers-perl (<< 0.99), libautodie-perl (<< 2.29-2), libcpan-meta-perl (<< 2.150010), libcpan-meta-requirements-perl (<< 2.140), libcpan-meta-yaml-perl (<< 0.018), libdigest-perl (<< 1.17.01), libexperimental-perl (<< 0.016), libextutils-cbuilder-perl (<< 0.280225), libextutils-command-perl (<< 7.24), libextutils-install-perl (<< 2.04), libextutils-parsexs-perl (<< 3.340000), libfile-spec-perl (<< 3.6700), libhttp-tiny-perl (<< 0.070), libi18n-langtags-perl (<< 0.42), libio-zlib-perl (<< 1.10), libjson-pp-perl (<< 2.27400.02), liblocale-codes-perl (<< 3.42), liblocale-maketext-perl (<< 1.28), liblocale-maketext-simple-perl (<< 0.21.01), libmath-bigint-perl (<< 1.999806), libmath-complex-perl (<< 1.5901), libmodule-corelist-perl (<< 5.20170922.26), libmodule-load-conditional-perl (<< 0.68), libmodule-load-perl (<< 0.32), libmodule-metadata-perl (<< 1.000033), libnet-perl (<< 1:3.10), libnet-ping-perl (<< 2.55), libparams-check-perl (<< 0.38), libparent-perl (<< 0.236), libparse-cpan-meta-perl (<< 2.150010), libperl-ostype-perl (<< 1.010), libpod-escapes-perl (<< 1.07), libpod-parser-perl (<< 1.63), libpod-simple-perl (<< 3.35), libtest-harness-perl (<< 3.38), libtest-simple-perl (<< 1.302073), libtest-tester-perl (<< 1.302073), libtest-use-ok-perl (<< 1.302073), libthread-queue-perl (<< 3.12), libtime-local-perl (<< 1.2500), libunicode-collate-perl (<< 1.19), libversion-perl (<< 1:0.9917), perl-base (<< 5.22.0~), perl-modules, podlators-perl (<< 4.09)
+Provides: libansicolor-perl, libarchive-tar-perl, libattribute-handlers-perl, libautodie-perl, libcpan-meta-perl, libcpan-meta-requirements-perl, libcpan-meta-yaml-perl, libdigest-perl, libexperimental-perl, libextutils-cbuilder-perl, libextutils-command-perl, libextutils-install-perl, libextutils-parsexs-perl, libfile-spec-perl, libhttp-tiny-perl, libi18n-langtags-perl, libio-zlib-perl, libjson-pp-perl, liblocale-codes-perl, liblocale-maketext-perl, liblocale-maketext-simple-perl, libmath-bigint-perl, libmath-complex-perl, libmodule-corelist-perl, libmodule-load-conditional-perl, libmodule-load-perl, libmodule-metadata-perl, libnet-perl, libnet-ping-perl, libparams-check-perl, libparent-perl, libparse-cpan-meta-perl, libperl-ostype-perl, libpod-escapes-perl, libpod-parser-perl, libpod-simple-perl, libtest-harness-perl, libtest-simple-perl, libtest-tester-perl, libtest-use-ok-perl, libthread-queue-perl, libtime-local-perl, libunicode-collate-perl, libversion-perl, libversion-requirements-perl, perl-modules, podlators-perl
+Depends: perl-base (>= 5.26.1-1)
+Pre-Depends: dpkg (>= 1.17.17)
+Recommends: perl (>= 5.26.1-1)
+Breaks: cli-common (<< 0.9+nmu1), libansicolor-perl (<< 4.06), libarchive-tar-perl (<< 2.24), libattribute-handlers-perl (<< 0.99), libautodie-perl (<< 2.29-2), libcpan-meta-perl (<< 2.150010), libcpan-meta-requirements-perl (<< 2.140), libcpan-meta-yaml-perl (<< 0.018), libdigest-perl (<< 1.17.01), libexperimental-perl (<< 0.016), libextutils-cbuilder-perl (<< 0.280225), libextutils-command-perl (<< 7.24), libextutils-install-perl (<< 2.04), libextutils-parsexs-perl (<< 3.340000), libfile-spec-perl (<< 3.6700), libhttp-tiny-perl (<< 0.070), libi18n-langtags-perl (<< 0.42), libio-zlib-perl (<< 1.10), libjson-pp-perl (<< 2.27400.02), liblocale-codes-perl (<< 3.42), liblocale-maketext-perl (<< 1.28), liblocale-maketext-simple-perl (<< 0.21.01), libmath-bigint-perl (<< 1.999806), libmath-complex-perl (<< 1.5901), libmodule-corelist-perl (<< 5.20170922.26), libmodule-load-conditional-perl (<< 0.68), libmodule-load-perl (<< 0.32), libmodule-metadata-perl (<< 1.000033), libnet-perl (<< 1:3.10), libnet-ping-perl (<< 2.55), libparams-check-perl (<< 0.38), libparent-perl (<< 0.236), libparse-cpan-meta-perl (<< 2.150010), libperl-ostype-perl (<< 1.010), libpod-escapes-perl (<< 1.07), libpod-parser-perl (<< 1.63), libpod-simple-perl (<< 3.35), libtest-harness-perl (<< 3.38), libtest-simple-perl (<< 1.302073), libtest-tester-perl (<< 1.302073), libtest-use-ok-perl (<< 1.302073), libthread-queue-perl (<< 3.12), libtime-local-perl (<< 1.2500), libunicode-collate-perl (<< 1.19), libversion-perl (<< 1:0.9917), maildirsync (<< 1.2-2.1), mono-apache-server2 (<< 3.8-2.1), mono-apache-server4 (<< 3.8-2.1), mono-fastcgi-server2 (<< 3.8-2.1), mono-fastcgi-server4 (<< 3.8-2.1), patcher (<< 0.0.20040521-6.1), pdl (<< 1:2.007-4), perl (<< 5.26.1~), podlators-perl (<< 4.09), polygen-data (<< 1.0.6.ds2-13.1), pristine-tar (<< 1.33), pure-ftpd-common (<< 1.0.36-3.2), rinse (<< 3.0.7), shorewall (<< 4.6.4.3-2), shorewall-core (<< 4.6.4.3-2), tvtime (<< 1.0.2-14)
+Conflicts: defoma (<< 0.11.12), mono-gac (<< 2.10.8.1-3), perl-modules (<< 5.22.0~)
+Description: Core Perl modules
+ Architecture independent Perl modules.  These modules are part of Perl and
+ required if the `perl' package is installed.
+ .
+ Note that this package only exists to save archive space and should be
+ considered an internal implementation detail of the `perl' package.
+ Other packages should not depend on `perl-modules-5.26' directly, they
+ should use `perl' (which depends on `perl-modules-5.26') instead.
+Homepage: http://dev.perl.org/perl5/
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: gcc
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 50
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: gcc-defaults (1.176ubuntu2.3)
+Version: 4:7.4.0-1ubuntu2.3
+Provides: c-compiler
+Depends: cpp (>= 4:7.4.0-1ubuntu2.3), gcc-7 (>= 7.4.0-1~)
+Recommends: libc6-dev | libc-dev
+Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+Conflicts: gcc-doc (<< 1:2.95.3)
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+ .
+ This is a dependency package providing the default GNU C compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: gpg-wks-server
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 235
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Depends: gpg (= 2.2.4-1ubuntu1.2), gpg-agent (= 2.2.4-1ubuntu1.2), libc6 (>= 2.14), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.21)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Description: GNU privacy guard - Web Key Service server
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package provides the GnuPG server for the Web Key Service
+ protocol.
+ .
+ A Web Key Service is a service that allows users to upload keys per
+ mail to be verified over https as described in
+ https://tools.ietf.org/html/draft-koch-openpgp-webkey-service
+ .
+ For more information see: https://wiki.gnupg.org/WKS
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: libgdbm5
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gdbm
+Version: 1.14.1-6
+Depends: libc6 (>= 2.14)
+Suggests: gdbm-l10n (= 1.14.1-6)
+Description: GNU dbm database routines (runtime version) 
+ GNU dbm ('gdbm') is a library of database functions that use extendible
+ hashing and works similarly to the standard UNIX 'dbm' functions.
+ .
+ The basic use of 'gdbm' is to store key/data pairs in a data file, thus
+ providing a persistent version of the 'dictionary' Abstract Data Type
+ ('hash' to perl programmers).
+Original-Maintainer: Dmitry Bogatov <KAction@gnu.org>
+Homepage: https://gnu.org/software/gdbm
 
 Package: coreutils
 Essential: yes
@@ -941,6 +1752,57 @@ Description: GNU core utilities
  uniq unlink users vdir wc who whoami yes
 Homepage: http://gnu.org/software/coreutils
 Original-Maintainer: Michael Stone <mstone@debian.org>
+
+Package: gpg-wks-client
+Status: install ok unpacked
+Priority: optional
+Section: utils
+Installed-Size: 251
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Depends: dirmngr (= 2.2.4-1ubuntu1.2), gpg (= 2.2.4-1ubuntu1.2), gpg-agent (= 2.2.4-1ubuntu1.2), libassuan0 (>= 2.0.1), libc6 (>= 2.14), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.21)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Description: GNU privacy guard - Web Key Service client
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package provides the GnuPG client for the Web Key Service
+ protocol.
+ .
+ A Web Key Service is a service that allows users to upload keys per
+ mail to be verified over https as described in
+ https://tools.ietf.org/html/draft-koch-openpgp-webkey-service
+ .
+ For more information see: https://wiki.gnupg.org/WKS
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: fakeroot
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.22-2ubuntu1
+Depends: libfakeroot (>= 1.22-2ubuntu1), libc6 (>= 2.15)
+Description: tool for simulating superuser privileges
+ fakeroot provides a fake "root environment" by means of LD_PRELOAD and
+ SysV IPC (or TCP) trickery. It puts wrappers around getuid(), chown(),
+ stat(), and other file-manipulation functions, so that unprivileged
+ users can (for instance) populate .deb archives with root-owned files;
+ various build tools use fakeroot for this by default.
+ .
+ This package contains fakeroot command and the daemon that remembers
+ fake ownership/permissions of files manipulated by fakeroot
+ processes.
+Original-Maintainer: Clint Adams <clint@debian.org>
 
 Package: e2fsprogs
 Essential: yes
@@ -1014,6 +1876,25 @@ Description: library for accessing process information from /proc
 Homepage: https://gitlab.com/procps-ng/procps
 Original-Maintainer: Craig Small <csmall@debian.org>
 
+Package: libhx509-5-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 348
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libasn1-8-heimdal (>= 1.4.0+git20110226), libc6 (>= 2.14), libcomerr2 (>= 1.34), libhcrypto4-heimdal (>= 1.4.0+git20110226), libheimbase1-heimdal (>= 1.6~git20131117), libroken18-heimdal (>= 1.7~git20150920), libwind0-heimdal (>= 1.4.0+git20110226)
+Description: Heimdal Kerberos - X509 support library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the x509 supportlibrary.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
+
 Package: libbz2-1.0
 Status: install ok installed
 Priority: important
@@ -1045,7 +1926,7 @@ Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 
 Package: libkmod2
-Status: install ok unpacked
+Status: install ok installed
 Priority: important
 Section: libs
 Installed-Size: 120
@@ -1078,6 +1959,47 @@ Description: block device ID library
  hard-coded device names and use a logical naming system instead.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
 
+Package: libgcc-7-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 13644
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Replaces: gccgo-7 (<< 7.5.0-3ubuntu1~18.04)
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libgcc1 (>= 1:7.5.0-3ubuntu1~18.04), libgomp1 (>= 7.5.0-3ubuntu1~18.04), libitm1 (>= 7.5.0-3ubuntu1~18.04), libatomic1 (>= 7.5.0-3ubuntu1~18.04), libasan4 (>= 7.5.0-3ubuntu1~18.04), liblsan0 (>= 7.5.0-3ubuntu1~18.04), libtsan0 (>= 7.5.0-3ubuntu1~18.04), libubsan0 (>= 7.5.0-3ubuntu1~18.04), libcilkrts5 (>= 7.5.0-3ubuntu1~18.04), libmpx2 (>= 7.5.0-3ubuntu1~18.04), libquadmath0 (>= 7.5.0-3ubuntu1~18.04)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Description: GCC support library (development files)
+ This package contains the headers and static library files necessary for
+ building C programs which use libgcc, libgomp, libquadmath, libssp or libitm.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: cpp-7
+Status: install ok installed
+Priority: optional
+Section: interpreters
+Installed-Size: 24009
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Replaces: gccgo-7 (<< 7.5.0-3ubuntu1~18.04)
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libc6 (>= 2.14), libgmp10 (>= 2:5.0.1~), libisl19 (>= 0.15), libmpc3, libmpfr6 (>= 3.1.3), zlib1g (>= 1:1.1.4)
+Suggests: gcc-7-locales (>= 7)
+Breaks: hardening-wrapper (<< 2.8+nmu3), libmagics++-dev (<< 2.28.0-4)
+Description: GNU C preprocessor
+ A macro processor that is used automatically by the GNU C compiler
+ to transform programs before actual compilation.
+ .
+ This package has been separated from gcc for the benefit of those who
+ require the preprocessor but not the compiler.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
 Package: libtasn1-6
 Status: install ok installed
 Priority: standard
@@ -1101,6 +2023,30 @@ Description: Manage ASN.1 structures (runtime)
  This package contains runtime libraries.
 Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
 Homepage: http://www.gnu.org/software/libtasn1/
+
+Package: gnupg-l10n
+Status: install ok installed
+Priority: optional
+Section: localization
+Installed-Size: 364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg (<< 2.1.14-2~), gnupg2 (<< 2.1.14-2~)
+Breaks: gnupg (<< 2.1.14-2~), gnupg2 (<< 2.1.14-2~)
+Enhances: dirmngr, gpg, gpg-agent
+Description: GNU privacy guard - localization files
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC 4880.
+ .
+ This package contains the translation files for the use of GnuPG in
+ non-English locales.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 
 Package: bzip2
 Status: install ok installed
@@ -1130,6 +2076,27 @@ Description: high-quality block-sorting file compressor - utilities
  predecessor, bzip (.bz).
 Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+
+Package: lsb-base
+Status: install ok installed
+Priority: required
+Section: misc
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: lsb
+Version: 9.20170808ubuntu1
+Description: Linux Standard Base init script functionality
+ The Linux Standard Base (http://www.linuxbase.org/) is a standard
+ core system that third-party applications written for Linux can
+ depend upon.
+ .
+ This package only includes the init-functions shell library, which
+ may be used by other packages' initialization scripts for console
+ logging and other purposes.
+Homepage: https://wiki.linuxfoundation.org/lsb/start
+Original-Maintainer: Debian LSB Team <debian-lsb@lists.debian.org>
 
 Package: libhogweed4
 Status: install ok installed
@@ -1161,26 +2128,22 @@ Description: low level cryptographic library (public-key cryptos)
 Original-Maintainer: Magnus Holmgren <holmgren@debian.org>
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
 
-Package: lsb-base
+Package: liblsan0
 Status: install ok installed
-Priority: required
-Section: misc
-Installed-Size: 58
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Multi-Arch: foreign
-Source: lsb
-Version: 9.20170808ubuntu1
-Description: Linux Standard Base init script functionality
- The Linux Standard Base (http://www.linuxbase.org/) is a standard
- core system that third-party applications written for Linux can
- depend upon.
- .
- This package only includes the init-functions shell library, which
- may be used by other packages' initialization scripts for console
- logging and other purposes.
-Homepage: https://wiki.linuxfoundation.org/lsb/start
-Original-Maintainer: Debian LSB Team <debian-lsb@lists.debian.org>
+Priority: optional
+Section: libs
+Installed-Size: 354
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.4), libgcc1 (>= 1:3.3)
+Description: LeakSanitizer -- a memory leak detector (runtime)
+ LeakSanitizer (Lsan) is a memory leak detector which is integrated
+ into AddressSanitizer.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 
 Package: procps
 Status: install ok installed
@@ -1219,6 +2182,63 @@ Description: /proc file system utilities
 Homepage: https://gitlab.com/procps-ng/procps
 Original-Maintainer: Craig Small <csmall@debian.org>
 
+Package: libstdc++-7-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 15352
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Provides: libstdc++-dev
+Depends: gcc-7-base (= 7.5.0-3ubuntu1~18.04), libgcc-7-dev (= 7.5.0-3ubuntu1~18.04), libstdc++6 (>= 7.5.0-3ubuntu1~18.04), libc6-dev (>= 2.13-0ubuntu6)
+Suggests: libstdc++-7-doc
+Conflicts: libg++2.8-dev, libg++27-dev, libg++272-dev (<< 2.7.2.8-1), libstdc++2.10-dev (<< 1:2.95.3-2), libstdc++2.8-dev, libstdc++2.9-dev, libstdc++2.9-glibc2.1-dev, libstdc++3.0-dev
+Description: GNU Standard C++ Library v3 (development files)
+ This package contains the headers and static library files necessary for
+ building C++ programs which use libstdc++.
+ .
+ libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+ was included up to g++-2.95. The first version of libstdc++-v3 appeared
+ in g++-3.0.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: perl
+Status: install ok installed
+Priority: standard
+Section: perl
+Installed-Size: 568
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: allowed
+Version: 5.26.1-6ubuntu0.3
+Replaces: perl-modules (<< 5.22.0~)
+Depends: perl-base (= 5.26.1-6ubuntu0.3), perl-modules-5.26 (>= 5.26.1-6ubuntu0.3), libperl5.26 (= 5.26.1-6ubuntu0.3)
+Pre-Depends: dpkg (>= 1.17.17)
+Recommends: netbase
+Suggests: perl-doc, libterm-readline-gnu-perl | libterm-readline-perl-perl, make
+Breaks: libperl-dev (<< 5.24.0~), perl-doc (<< 5.26.1-1)
+Conflicts: libjson-pp-perl (<< 2.27200-2)
+Conffiles:
+ /etc/perl/Net/libnet.cfg fb2946cae573b8ed3d654a180d458733
+Description: Larry Wall's Practical Extraction and Report Language
+ Perl is a highly capable, feature-rich programming language with over
+ 20 years of development. Perl 5 runs on over 100 platforms from
+ portables to mainframes. Perl is suitable for both rapid prototyping
+ and large scale development projects.
+ .
+ Perl 5 supports many programming styles, including procedural,
+ functional, and object-oriented. In addition to this, it is supported
+ by an ever-growing collection of reusable modules which accelerate
+ development. Some of these modules include Web frameworks, database
+ integration, networking protocols, and encryption. Perl provides
+ interfaces to C and C++ for custom extension development.
+Homepage: http://dev.perl.org/perl5/
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
 Package: libgpg-error0
 Status: install ok installed
 Priority: optional
@@ -1236,6 +2256,81 @@ Description: library for common error values and messages in GnuPG components
  pinentry, SmartCard Daemon and possibly more in the future.
 Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 Homepage: https://www.gnupg.org/related_software/libgpg-error/
+
+Package: gcc-7-base
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 115
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-7
+Version: 7.5.0-3ubuntu1~18.04
+Breaks: gcc-4.4-base (<< 4.4.7), gcc-4.7-base (<< 4.7.3), gcj-4.4-base (<< 4.4.6-9~), gcj-4.6-base (<< 4.6.1-4~), gnat (<< 7), gnat-4.4-base (<< 4.4.6-3~), gnat-4.6 (<< 4.6.1-5~)
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: binutils-common
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 420
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.30-21ubuntu1~18.04.3
+Replaces: binutils (<< 2.29.1-3.1~)
+Breaks: binutils (<< 2.29.1-3.1~)
+Description: Common files for the GNU assembler, linker and binary utilities
+ This package contains the localization files used by binutils packages for
+ various target architectures and parts of the binutils documentation. It is
+ not useful on its own.
+Homepage: https://www.gnu.org/software/binutils/
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: libfile-fcntllock-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.22-3build2
+Depends: perl (>= 5.26.0-4), perlapi-5.26.0, libc6 (>= 2.4)
+Suggests: gcc | c-compiler
+Description: Perl module for file locking with fcntl(2)
+ File::FcntlLock is a Perl module to do file locking in an object oriented
+ fashion using the fcntl(2) system call. This allows locks on parts of a file
+ as well as on the whole file and overcomes some known problems with flock(2),
+ on which Perl's flock() function is based.
+ .
+ Furthermore due to its design it supports reliable locking over NFS.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: https://metacpan.org/release/File-FcntlLock
+
+Package: libalgorithm-merge-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 42
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.08-3
+Depends: perl, libalgorithm-diff-perl
+Description: Perl module for three-way merge of textual data
+ Algorithm::Merge provides three-way merge and diff functions, complementing
+ the functionality offered by Algorithm::Diff (libalgorithm-diff-perl). Given
+ three sets of items, known as the original, left and right, this module can
+ take a three-way difference or merge them. Taking a difference provides an
+ array reference that is very similar to the behaviour of Algorithm::Diff. One
+ can also implement custom conflict resolution using the CONFLICT callback.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: https://metacpan.org/release/Algorithm-Merge
 
 Package: nano
 Status: install ok installed
@@ -1309,6 +2404,26 @@ Description: Debian base system miscellaneous files
  and the text of several common licenses in use on Debian systems.
 Original-Maintainer: Santiago Vila <sanvila@debian.org>
 
+Package: libmpx2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 46
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Replaces: libmpx0 (<< 6-20160120-1)
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.17)
+Description: Intel memory protection extensions (runtime)
+ Intel MPX is a set of processor features which, with compiler,
+ runtime library and OS support, brings increased robustness to
+ software by checking pointer references whose compile time normal
+ intentions are usurped at runtime due to buffer overflow.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
 Package: libgmp10
 Status: install ok installed
 Priority: optional
@@ -1348,6 +2463,53 @@ Description: Utilities for sensible alternative selection
  The specific utilities included are: sensible-browser sensible-editor
  sensible-pager
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+
+Package: dpkg-dev
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 1928
+Origin: debian
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Bugs: debbugs://bugs.debian.org
+Architecture: all
+Multi-Arch: foreign
+Source: dpkg
+Version: 1.19.0.5ubuntu2.3
+Depends: perl:any, libdpkg-perl (= 1.19.0.5ubuntu2.3), tar (>= 1.28-1), bzip2, xz-utils, patch (>= 2.7), make, binutils
+Recommends: build-essential, gcc | c-compiler, fakeroot, gnupg | gnupg2, gpgv | gpgv2, libalgorithm-merge-perl
+Suggests: debian-keyring
+Breaks: debhelper (<< 10.10.1~)
+Conffiles:
+ /etc/dpkg/shlibs.default 1a2b9d0a869e2aa885ae3621c557fb95
+ /etc/dpkg/shlibs.override 84b1e69080569cc5c613a50887af5200
+Description: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
+ .
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+
+Package: patch
+Status: install ok installed
+Priority: standard
+Section: vcs
+Installed-Size: 238
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 2.7.6-2ubuntu1.1
+Depends: libc6 (>= 2.17)
+Suggests: ed, diffutils-doc
+Description: Apply a diff file to an original
+ Patch will take a patch file containing any of the four forms
+ of difference listing produced by the diff program and apply
+ those differences to an original file, producing a patched
+ version.
+Homepage: http://savannah.gnu.org/projects/patch/
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 
 Package: passwd
 Status: install ok installed
@@ -1405,6 +2567,26 @@ Description: helper tools for all init systems
  specific to systemd at all. Maintainers of other init systems are welcome to
  include their helpers in this package.
 Original-Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+
+Package: libalgorithm-diff-xs-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 41
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.04-5
+Depends: perl (>= 5.26.1-4), perlapi-5.26.1, libc6 (>= 2.14), libalgorithm-diff-perl
+Description: module to find differences between files (XS accelerated)
+ Algorithm::Diff::XS is a Perl diff utility module based on Joe Schaefer's
+ excellent but not very well-known Algorithm::LCS module, with a drop-in
+ interface identical to Algorithm::Diff.
+ .
+ Note that only the LCSidx function is optimized in XS at the moment, which
+ means only compact_diff will get significantly faster for large data sets,
+ while diff and sdiff will run in identical speed as Algorithm::Diff.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: https://metacpan.org/release/Algorithm-Diff-XS
 
 Package: ncurses-base
 Essential: yes
@@ -1515,6 +2697,70 @@ Description: high level interface to Linux seccomp filter
 Homepage: https://github.com/seccomp/libseccomp
 Original-Maintainer: Kees Cook <kees@debian.org>
 
+Package: libperl5.26
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 21395
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: perl
+Version: 5.26.1-6ubuntu0.3
+Replaces: libarchive-tar-perl (<= 1.38-2), libcompress-raw-bzip2-perl (<< 2.074), libcompress-raw-zlib-perl (<< 2.074), libcompress-zlib-perl (<< 2.074), libdigest-md5-perl (<< 2.55), libdigest-sha-perl (<< 5.96), libencode-perl (<< 2.94), libio-compress-base-perl (<< 2.074), libio-compress-bzip2-perl (<< 2.074), libio-compress-perl (<< 2.074), libio-compress-zlib-perl (<< 2.074), libmime-base64-perl (<< 3.15), libmodule-corelist-perl (<< 2.14-2), libstorable-perl (<< 2.62), libsys-syslog-perl (<< 0.35), libthreads-perl (<< 2.15), libthreads-shared-perl (<< 1.56), libtime-hires-perl (<< 1.9741), libtime-piece-perl (<< 1.31), perl (<< 5.22.0~), perl-base (<< 5.22.0~)
+Provides: libcompress-raw-bzip2-perl, libcompress-raw-zlib-perl, libcompress-zlib-perl, libdigest-md5-perl, libdigest-sha-perl, libencode-perl, libio-compress-base-perl, libio-compress-bzip2-perl, libio-compress-perl, libio-compress-zlib-perl, libmime-base64-perl, libstorable-perl, libsys-syslog-perl, libthreads-perl, libthreads-shared-perl, libtime-hires-perl, libtime-piece-perl, perl-cross-config
+Depends: libbz2-1.0, libc6 (>= 2.23), libdb5.3, libgdbm-compat4, libgdbm5 (>= 1.12), zlib1g (>= 1:1.2.2.3), perl-modules-5.26 (>= 5.26.1-6ubuntu0.3)
+Breaks: dh-make-perl (<< 0.73-1), ftpmirror (<< 1.96+dfsg-13), libcompress-raw-bzip2-perl (<< 2.074), libcompress-raw-zlib-perl (<< 2.074), libcompress-zlib-perl (<< 2.074), libdigest-md5-perl (<< 2.55), libdigest-sha-perl (<< 5.96), libencode-perl (<< 2.94), libhtml-template-compiled-perl (<< 0.95-1), libio-compress-base-perl (<< 2.074), libio-compress-bzip2-perl (<< 2.074), libio-compress-perl (<< 2.074), libio-compress-zlib-perl (<< 2.074), libload-perl (<< 0.20-1), libmime-base64-perl (<< 3.15), libnet-jifty-perl (<< 0.14-1), libperl-apireference-perl (<< 0.09-1), libregexp-optimizer-perl (<< 0.15-3), libsoap-lite-perl (<< 0.712-4), libstorable-perl (<< 2.62), libsys-syslog-perl (<< 0.35), libthreads-perl (<< 2.15), libthreads-shared-perl (<< 1.56), libtime-hires-perl (<< 1.9741), libtime-piece-perl (<< 1.31), libxml-parser-lite-tree-perl (<< 0.14-1), libyaml-perl (<< 0.73-1), mrtg (<< 2.16.3-3.1)
+Description: shared Perl library
+ This package contains the shared Perl library, used by applications
+ which embed a Perl interpreter.
+ .
+ It also contains the architecture-dependent parts of the standard
+ library (and depends on perl-modules-5.26 which contains the
+ architecture-independent parts).
+Homepage: http://dev.perl.org/perl5/
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
+
+Package: libldap-2.4-2
+Status: install ok installed
+Priority: standard
+Section: libs
+Installed-Size: 498
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: openldap
+Version: 2.4.45+dfsg-1ubuntu1.4
+Replaces: libldap-2.3-0, libldap2
+Depends: libc6 (>= 2.14), libgnutls30 (>= 3.5.6), libgssapi3-heimdal (>= 1.4.0+git20110226), libsasl2-2, libldap-common (>= 2.4.45+dfsg-1ubuntu1.4)
+Conflicts: ldap-utils (<= 2.1.23-1)
+Description: OpenLDAP libraries
+ These are the run-time libraries for the OpenLDAP (Lightweight Directory
+ Access Protocol) servers and clients.
+Homepage: http://www.openldap.org/
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+
+Package: libssl1.1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 3933
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: openssl
+Version: 1.1.1-1ubuntu2.1~18.04.5
+Depends: libc6 (>= 2.25), debconf (>= 0.5) | debconf-2.0
+Breaks: isync (<= 1.3.0-1build1), python-boto (<= 2.44.0-1ubuntu2), python-httplib2 (<= 0.9.2+dfsg-1), python-imaplib2 (<= 2.57-1), python3-boto (<= 2.44.0-1ubuntu2), python3-imaplib2 (<= 2.57-1)
+Description: Secure Sockets Layer toolkit - shared libraries
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It provides the libssl and libcrypto shared libraries.
+Homepage: https://www.openssl.org/
+Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+
 Package: sysvinit-utils
 Essential: yes
 Status: install ok installed
@@ -1536,6 +2782,61 @@ Description: System-V-like utilities
  killall5, pidof
 Homepage: http://savannah.nongnu.org/projects/sysvinit
 Original-Maintainer: Debian sysvinit maintainers <pkg-sysvinit-devel@lists.alioth.debian.org>
+
+Package: xz-utils
+Status: install ok installed
+Priority: required
+Section: utils
+Installed-Size: 428
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 5.2.2-1.3
+Replaces: lzip (<< 1.8~rc2), xz-lzma
+Provides: lzma
+Depends: libc6 (>= 2.17), liblzma5 (>= 5.2.2)
+Breaks: lzip (<< 1.8~rc2)
+Conflicts: lzma (<< 9.22-1), xz-lzma
+Description: XZ-format compression utilities
+ XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+ compression format, which provides memory-hungry but powerful
+ compression (often better than bzip2) and fast, easy decompression.
+ .
+ This package provides the command line tools for working with XZ
+ compression, including xz, unxz, xzcat, xzgrep, and so on. They can
+ also handle the older LZMA format, and if invoked via appropriate
+ symlinks will emulate the behavior of the commands in the lzma
+ package.
+ .
+ The XZ format is similar to the older LZMA format but includes some
+ improvements for general use:
+ .
+  * 'file' magic for detecting XZ files;
+  * crc64 data integrity check;
+  * limited random-access reading support;
+  * improved support for multithreading (not used in xz-utils);
+  * support for flushing the encoder.
+Original-Maintainer: Jonathan Nieder <jrnieder@gmail.com>
+Homepage: http://tukaani.org/xz/
+
+Package: libheimbase1-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 104
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libc6 (>= 2.14)
+Description: Heimdal Kerberos - Base library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the base library.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
 
 Package: libsemanage-common
 Status: install ok installed
@@ -1566,6 +2867,57 @@ Description: Common files for SELinux policy management libraries
  Control, and Multi-level Security.
 Homepage: http://userspace.selinuxproject.org/
 Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
+
+Package: libfakeroot
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 149
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: fakeroot
+Version: 1.22-2ubuntu1
+Replaces: fakeroot (<< 1.20-2~)
+Depends: libc6 (>= 2.14)
+Breaks: fakeroot (<< 1.20-2~)
+Conffiles:
+ /etc/ld.so.conf.d/fakeroot-x86_64-linux-gnu.conf f9f2331782e9078d5472c77e1d9cd869
+Description: tool for simulating superuser privileges - shared libraries
+ fakeroot provides a fake "root environment" by means of LD_PRELOAD and
+ SysV IPC (or TCP) trickery. It puts wrappers around getuid(), chown(),
+ stat(), and other file-manipulation functions, so that unprivileged
+ users can (for instance) populate .deb archives with root-owned files;
+ various build tools use fakeroot for this by default.
+ .
+ This package contains the LD_PRELOAD libraries.
+Original-Maintainer: Clint Adams <clint@debian.org>
+
+Package: gpgsm
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 549
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg2 (<< 2.1.10-2)
+Depends: gpgconf (= 2.2.4-1ubuntu1.2), libassuan0 (>= 2.0.1), libc6 (>= 2.14), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libksba8 (>= 1.3.4), libreadline7 (>= 6.0)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Breaks: gnupg2 (<< 2.1.10-2)
+Description: GNU privacy guard - S/MIME version
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package contains the gpgsm program. gpgsm is a tool to provide
+ digital encryption and signing services on X.509 certificates and the
+ CMS protocol. gpgsm includes complete certificate management.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
 
 Package: libp11-kit0
 Status: install ok installed
@@ -1644,6 +2996,22 @@ Description: SELinux runtime shared libraries
 Homepage: http://userspace.selinuxproject.org/
 Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 
+Package: gcc-8-base
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 117
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
 Package: dpkg
 Essential: yes
 Status: install ok installed
@@ -1674,21 +3042,79 @@ Description: Debian package management system
 Homepage: https://wiki.debian.org/Teams/Dpkg
 Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
 
-Package: gcc-8-base
+Package: gnupg-utils
 Status: install ok installed
-Priority: required
+Priority: optional
+Section: utils
+Installed-Size: 466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg (<< 2.1.21-4), gnupg-agent (<< 2.1.21-4)
+Depends: libassuan0 (>= 2.0.1), libbz2-1.0, libc6 (>= 2.15), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libksba8 (>= 1.3.4), zlib1g (>= 1:1.1.4)
+Recommends: gpg, gpg-agent, gpgconf, gpgsm
+Breaks: gnupg (<< 2.1.21-4), gnupg-agent (<< 2.1.21-4)
+Description: GNU privacy guard - utility programs
+ GnuPG is GNU's tool for secure communication and data storage.
+ .
+ This package contains several useful utilities for manipulating
+ OpenPGP data and other related cryptographic elements.  It includes:
+ .
+  * addgnupghome -- create .gnupg home directories
+  * applygnupgdefaults -- run gpgconf --apply-defaults for all users
+  * gpgcompose -- an experimental tool for constructing arbitrary
+                  sequences of OpenPGP packets (e.g. for testing)
+  * gpgparsemail -- parse an e-mail message into annotated format
+  * gpgsplit -- split a sequence of OpenPGP packets into files
+  * gpg-zip -- encrypt or sign files in an archive
+  * kbxutil -- list, export, import Keybox data
+  * lspgpot -- convert PGP ownertrust values to GnuPG
+  * migrate-pubring-from-classic-gpg -- use only "modern" formats
+  * symcryptrun -- use simple symmetric encryption tool in GnuPG framework
+  * watchgnupg -- watch socket-based logs
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: libsqlite3-0
+Status: install ok installed
+Priority: standard
 Section: libs
-Installed-Size: 117
-Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1181
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: amd64
 Multi-Arch: same
-Source: gcc-8
-Version: 8.4.0-1ubuntu1~18.04
-Description: GCC, the GNU Compiler Collection (base package)
- This package contains files common to all languages and libraries
- contained in the GNU Compiler Collection (GCC).
-Homepage: http://gcc.gnu.org/
-Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Source: sqlite3
+Version: 3.22.0-1ubuntu0.3
+Depends: libc6 (>= 2.14)
+Description: SQLite 3 shared library
+ SQLite is a C library that implements an SQL database engine.
+ Programs that link with the SQLite library can have SQL database
+ access without running a separate RDBMS process.
+Homepage: http://www.sqlite.org/
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+
+Package: libalgorithm-diff-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 136
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.19.03-1
+Depends: perl
+Recommends: libalgorithm-diff-xs-perl
+Description: module to find differences between files
+ Algorithm::Diff is a Perl module that allows users to analyze text based on a
+ Longest Common Subsequence (LCS) algorithm. It can compare two files and find
+ the differences between them, which can produce the same information as the
+ common Unix tool 'diff'.
+ .
+ There is an XS-optimized implementation of the core loop, which accelerates
+ some types of diff output (see libalgorithm-diff-xs-perl).
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: http://search.cpan.org/~tyemq/Algorithm-Diff/
 
 Package: apt
 Status: install ok installed
@@ -1726,6 +3152,27 @@ Description: commandline package manager
   * apt-key as an interface to manage authentication keys
 Original-Maintainer: APT Development Team <deity@lists.debian.org>
 
+Package: liblocale-gettext-perl
+Status: install ok installed
+Priority: required
+Section: perl
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1.07-3build2
+Depends: libc6 (>= 2.2.5)
+Pre-Depends: perl-base (>= 5.26.0-4), perlapi-5.26.0
+Description: module using libc functions for internationalization in Perl
+ The Locale::gettext module permits access from perl to the gettext() family of
+ functions for retrieving message strings from databases constructed
+ to internationalize software.
+ .
+ It provides gettext(), dgettext(), dcgettext(), textdomain(),
+ bindtextdomain(), bind_textdomain_codeset(), ngettext(), dcngettext()
+ and dngettext().
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: https://metacpan.org/release/gettext
+
 Package: diffutils
 Essential: yes
 Status: install ok installed
@@ -1754,6 +3201,56 @@ Description: File comparison utilities
  update, or "patch", a copy of the file.
 Original-Maintainer: Santiago Vila <sanvila@debian.org>
 Homepage: http://www.gnu.org/software/diffutils/
+
+Package: g++
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 16
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: gcc-defaults (1.176ubuntu2.3)
+Version: 4:7.4.0-1ubuntu2.3
+Provides: c++-compiler
+Depends: cpp (>= 4:7.4.0-1ubuntu2.3), gcc (>= 4:7.4.0-1ubuntu2.3), g++-7 (>= 7.4.0-1~), gcc-7 (>= 7.4.0-1~)
+Suggests: g++-multilib
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This is a dependency package providing the default GNU C++ compiler.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: pinentry-curses
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 96
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: pinentry
+Version: 1.1.0-1
+Provides: pinentry
+Depends: libassuan0 (>= 2.0.1), libc6 (>= 2.14), libgpg-error0 (>= 1.14), libncursesw5 (>= 6), libtinfo5 (>= 6)
+Suggests: pinentry-doc
+Enhances: gnupg-agent
+Description: curses-based PIN or pass-phrase entry dialog for GnuPG
+ This package contains a program that allows for secure entry of PINs or
+ pass phrases.  That means it tries to take care that the entered
+ information is not swapped to disk or temporarily stored anywhere.
+ This functionality is particularly useful for entering pass phrases
+ when using encryption software such as GnuPG or e-mail clients using
+ the same.  It uses an open protocol and is therefore not tied to
+ particular software.
+ .
+ The program contained in this package implements a PIN entry dialog
+ using the curses tool kit, meaning that it is useful for users
+ working in text mode without the X Window System.  There are sibling
+ packages that implement PIN entry dialogs that use an X tool kit.  If
+ you install any of the graphical packages then this package is not
+ necessary because the sibling packages automatically fall back to
+ text mode if X is not active.
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+Homepage: https://www.gnupg.org/related_software/pinentry/
 
 Package: libpam-modules
 Status: install ok installed
@@ -1785,6 +3282,31 @@ Description: Pluggable Authentication Modules for PAM
 Homepage: http://www.linux-pam.org/
 Original-Maintainer: Steve Langasek <vorlon@debian.org>
 
+Package: libmpc3
+Status: install ok installed
+Priority: extra
+Section: libs
+Installed-Size: 110
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: mpclib3
+Version: 1.1.0-1
+Depends: libc6 (>= 2.4), libgmp10, libmpfr6 (>= 4.0.0)
+Description: multiple precision complex floating-point library
+ MPC is a portable library written in C for arbitrary precision
+ arithmetic on complex numbers providing correct rounding. For the time
+ being, it contains all arithmetic operations over complex numbers, the
+ exponential and the logarithm functions, the trigonometric and
+ hyperbolic functions.
+ .
+ Ultimately, it should implement a multiprecision equivalent of the ISO
+ C99 standard.
+ .
+ It builds upon the GNU MP and the MPFR libraries.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Homepage: http://www.multiprecision.org/mpc/
+
 Package: libstdc++6
 Status: install ok installed
 Priority: optional
@@ -1808,6 +3330,25 @@ Description: GNU Standard C++ Library v3
  in g++-3.0.
 Homepage: http://gcc.gnu.org/
 Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+
+Package: binutils
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 103
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 2.30-21ubuntu1~18.04.3
+Provides: binutils-gold, elf-binutils
+Depends: libc6 (>= 2.27), zlib1g (>= 1:1.1.4), binutils-common (= 2.30-21ubuntu1~18.04.3), libbinutils (= 2.30-21ubuntu1~18.04.3), binutils-x86-64-linux-gnu (= 2.30-21ubuntu1~18.04.3)
+Suggests: binutils-doc (>= 2.30-21ubuntu1~18.04.3)
+Conflicts: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3), binutils-multiarch (<< 2.27-8), modutils (<< 2.4.19-1)
+Description: GNU assembler, linker and binary utilities
+ The programs in this package are used to assemble, link and manipulate
+ binary and object files.  They may be used in conjunction with a compiler
+ and various libraries to build programs.
+Homepage: https://www.gnu.org/software/binutils/
+Original-Maintainer: Matthias Klose <doko@debian.org>
 
 Package: libffi6
 Status: install ok installed
@@ -1849,6 +3390,43 @@ Description: Dynamic library for security auditing - common files
  manpage.
 Homepage: https://people.redhat.com/sgrubb/audit/
 Original-Maintainer: Laurent Bigonville <bigon@debian.org>
+
+Package: libc-dev-bin
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 418
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: glibc
+Version: 2.27-3ubuntu1
+Depends: libc6 (>> 2.27), libc6 (<< 2.28)
+Recommends: manpages, manpages-dev
+Description: GNU C Library: Development binaries
+ This package contains utility programs related to the GNU C Library
+ development package.
+Homepage: https://www.gnu.org/software/libc/libc.html
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+
+Package: libkrb5-26-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 645
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libasn1-8-heimdal (>= 1.6~git20131117), libc6 (>= 2.15), libcomerr2 (>= 1.41.11), libhcrypto4-heimdal (>= 1.7~git20161112), libheimbase1-heimdal (>= 1.6~git20131117), libhx509-5-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.7~git20160418), libsqlite3-0 (>= 3.5.9), libwind0-heimdal (>= 1.6~git20120311)
+Description: Heimdal Kerberos - libraries
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the Kerberos 5 library.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
 
 Package: findutils
 Essential: yes
@@ -1894,6 +3472,31 @@ Description: Pluggable Authentication Modules library
 Homepage: http://www.linux-pam.org/
 Original-Maintainer: Steve Langasek <vorlon@debian.org>
 
+Package: libgdbm-compat4
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gdbm
+Version: 1.14.1-6
+Depends: libc6 (>= 2.14), libgdbm5 (>= 1.14)
+Description: GNU dbm database routines (legacy support runtime version) 
+ GNU dbm ('gdbm') is a library of database functions that use extendible
+ hashing and works similarly to the standard UNIX 'dbm' functions.
+ .
+ The basic use of 'gdbm' is to store key/data pairs in a data file, thus
+ providing a persistent version of the 'dictionary' Abstract Data Type
+ ('hash' to perl programmers).
+ .
+ This package includes library files, required to run old programs,
+ that use legacy 'dbm' interface. For new programs, please use modern
+ interface, provided by libgdbm5 and libgdbm-dev.
+Original-Maintainer: Dmitry Bogatov <KAction@gnu.org>
+Homepage: https://gnu.org/software/gdbm
+
 Package: libcap-ng0
 Status: install ok installed
 Priority: optional
@@ -1933,6 +3536,30 @@ Description: device mounting library
  This device mounting library is used by mount and umount helpers.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
 
+Package: libsasl2-modules
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 224
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: cyrus-sasl2
+Version: 2.1.27~101-g0780600+dfsg-3ubuntu2.1
+Depends: libc6 (>= 2.14), libssl1.1 (>= 1.1.0)
+Suggests: libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal, libsasl2-modules-ldap, libsasl2-modules-otp, libsasl2-modules-sql
+Breaks: logcheck-database (<= 1.3.16~)
+Conffiles:
+ /etc/logcheck/ignore.d.server/libsasl2-modules c032d5205f090a30661ae9f82a03f36e
+Description: Cyrus SASL - pluggable authentication modules
+ This is the Cyrus SASL API implementation, version 2.1. See package
+ libsasl2-2 and RFC 2222 for more information.
+ .
+ This package provides the following SASL modules: LOGIN, PLAIN, ANONYMOUS,
+ NTLM, CRAM-MD5, and DIGEST-MD5 (with DES support).
+Homepage: https://www.cyrusimap.org/
+Original-Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
+
 Package: login
 Essential: yes
 Status: install ok installed
@@ -1959,6 +3586,26 @@ Description: system login tools
  user ID (useful being able to execute commands as another user).
 Homepage: https://github.com/shadow-maint/shadow
 Original-Maintainer: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
+
+Package: libgssapi3-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libasn1-8-heimdal (>= 1.4.0+git20110226), libc6 (>= 2.14), libcomerr2 (>= 1.01), libhcrypto4-heimdal (>= 1.4.0+git20110226), libheimntlm0-heimdal (>= 1.4.0+git20110226), libkrb5-26-heimdal (>= 1.6~git20131117), libroken18-heimdal (>= 1.4.0+git20110226)
+Conflicts: libgssapi3
+Description: Heimdal Kerberos - GSSAPI support library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the library for GSSAPI support.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
 
 Package: adduser
 Status: install ok installed
@@ -2042,6 +3689,29 @@ Description: Access control list shared library
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Homepage: http://savannah.nongnu.org/projects/acl/
 
+Package: manpages-dev
+Status: install ok installed
+Priority: optional
+Section: doc
+Installed-Size: 3820
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: manpages
+Version: 4.15-1
+Replaces: libbsd-dev (<< 0.8.4-1), manpages (<< 4.13-3)
+Depends: manpages
+Suggests: man-browser
+Breaks: libbsd-dev (<< 0.8.4-1), manpages (<< 4.13-3)
+Description: Manual pages about using GNU/Linux for development
+ These man pages describe the Linux programming interface, including
+ these two sections:
+  2 = Linux system calls.
+  3 = Library calls (note that a more comprehensive source of information
+      may be found in the glibc-doc and glibc-doc-reference packages).
+Original-Maintainer: Martin Schulze <joey@debian.org>
+Homepage: https://www.kernel.org/doc/man-pages/
+
 Package: ncurses-bin
 Essential: yes
 Status: install ok installed
@@ -2063,6 +3733,95 @@ Description: terminal-related programs and man pages
  resetting terminals and such.
 Homepage: https://invisible-island.net/ncurses/
 Original-Maintainer: Craig Small <csmall@debian.org>
+
+Package: dirmngr
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 852
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg2 (<< 2.1.10-2)
+Depends: adduser, gpgconf (= 2.2.4-1ubuntu1.2), lsb-base (>= 3.2-13), libassuan0 (>= 2.4.0), libc6 (>= 2.15), libgcrypt20 (>= 1.8.0), libgnutls30 (>= 3.5.6), libgpg-error0 (>= 1.21), libksba8 (>= 1.3.4), libldap-2.4-2 (>= 2.4.7), libnpth0 (>= 0.90)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Suggests: dbus-user-session, libpam-systemd, pinentry-gnome3, tor
+Breaks: gnupg2 (<< 2.1.10-2)
+Enhances: gpg, gpgsm, squid
+Description: GNU privacy guard - network certificate management service
+ dirmngr is a server for managing and downloading OpenPGP and X.509
+ certificates, as well as updates and status signals related to those
+ certificates.  For OpenPGP, this means pulling from the public
+ HKP/HKPS keyservers, or from LDAP servers.  For X.509 this includes
+ Certificate Revocation Lists (CRLs) and Online Certificate Status
+ Protocol updates (OCSP).  It is capable of using tor for network
+ access.
+ .
+ dirmngr is used for network access by gpg, gpgsm, and dirmngr-client,
+ among other tools.  Unless this package is installed, the parts of
+ the GnuPG suite that try to interact with the network will fail.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: libc6-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 18812
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: glibc
+Version: 2.27-3ubuntu1
+Provides: libc-dev
+Depends: libc6 (= 2.27-3ubuntu1), libc-dev-bin (= 2.27-3ubuntu1), linux-libc-dev
+Suggests: glibc-doc, manpages-dev
+Breaks: binutils (<< 2.26), binutils-gold (<< 2.20.1-11), cmake (<< 2.8.4+dfsg.1-5), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2), gcc-4.6 (<< 4.6.0-12), libhwloc-dev (<< 1.2-3), libjna-java (<< 3.2.7-4), liblouis-dev (<< 2.3.0-2), liblouisxml-dev (<< 2.4.0-2), libperl5.26 (<< 5.26.1-3), make (<< 3.81-8.1), pkg-config (<< 0.26-1)
+Conflicts: libc0.1-dev, libc0.3-dev, libc6.1-dev
+Description: GNU C Library: Development Libraries and Header Files
+ Contains the symlinks, headers, and object files needed to compile
+ and link programs which use the standard C library.
+Homepage: https://www.gnu.org/software/libc/libc.html
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+
+Package: libassuan0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 100
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: libassuan
+Version: 2.5.1-2
+Depends: libc6 (>= 2.14), libgpg-error0 (>= 1.14)
+Description: IPC library for the GnuPG components
+ Libassuan is a small library implementing the so-called "Assuan
+ protocol". This protocol is used for IPC between most newer GnuPG
+ components. Both server and client side functions are provided.
+Original-Maintainer: Debian GnuPG-Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+Homepage: https://www.gnupg.org/related_software/libassuan/index.html
+
+Package: libheimntlm0-heimdal
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: heimdal
+Version: 7.5.0+dfsg-1
+Depends: libc6 (>= 2.4), libhcrypto4-heimdal (>= 1.4.0+git20110226), libkrb5-26-heimdal (>= 1.4.0+git20110226), libroken18-heimdal (>= 1.4.0+git20110226), libwind0-heimdal (>= 1.4.0+git20110226)
+Description: Heimdal Kerberos - NTLM support library
+ Heimdal is a free implementation of Kerberos 5 that aims to be
+ compatible with MIT Kerberos.
+ .
+ This package contains the NTLM support library.
+Original-Maintainer: Brian May <bam@debian.org>
+Homepage: http://www.h5l.org/
 
 Package: libsepol1
 Status: install ok installed
@@ -2092,6 +3851,24 @@ Description: SELinux library for manipulating binary security policies
  on binary policies such as customizing policy boolean settings.
 Original-Maintainer: Debian SELinux maintainers <selinux-devel@lists.alioth.debian.org>
 Homepage: http://userspace.selinuxproject.org/
+
+Package: libitm1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 127
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-8
+Version: 8.4.0-1ubuntu1~18.04
+Depends: gcc-8-base (= 8.4.0-1ubuntu1~18.04), libc6 (>= 2.14)
+Description: GNU Transactional Memory Library
+ GNU Transactional Memory Library (libitm) provides transaction support for
+ accesses to the memory of a process, enabling easy-to-use synchronization of
+ accesses to shared memory by several threads.
+Homepage: http://gcc.gnu.org/
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 
 Package: ubuntu-keyring
 Status: install ok installed
@@ -2154,6 +3931,34 @@ Description: miscellaneous system utilities
  interface with real time clock, etc.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
 
+Package: gpg
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 1082
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: gnupg2
+Version: 2.2.4-1ubuntu1.2
+Replaces: gnupg (<< 2.1.21-4)
+Depends: gpgconf (= 2.2.4-1ubuntu1.2), libassuan0 (>= 2.0.1), libbz2-1.0, libc6 (>= 2.14), libgcrypt20 (>= 1.8.0), libgpg-error0 (>= 1.14), libreadline7 (>= 6.0), libsqlite3-0 (>= 3.7.15), zlib1g (>= 1:1.1.4)
+Recommends: gnupg (= 2.2.4-1ubuntu1.2)
+Breaks: gnupg (<< 2.1.21-4)
+Description: GNU Privacy Guard -- minimalist public key operations
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC4880.
+ .
+ This package contains /usr/bin/gpg itself, and is useful on its own
+ only for public key operations (encryption, signature verification,
+ listing OpenPGP certificates, etc).  If you want full capabilities
+ (including secret key operations, network access, etc), please
+ install the "gnupg" package, which pulls in the full suite of tools.
+Homepage: https://www.gnupg.org/
+Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
 Package: sed
 Essential: yes
 Status: install ok installed
@@ -2187,4 +3992,70 @@ Depends: libc6 (>= 2.25)
 Description: smart column output alignment library
  This smart column output alignment library is used by fdisk utilities.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
+
+Package: netbase
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 5.4
+Conffiles:
+ /etc/protocols bb9c019d6524e913fd72441d58b68216
+ /etc/rpc f0b6f6352bf886623adc04183120f83b
+ /etc/services 567c100888518c1163b3462993de7d47
+Description: Basic TCP/IP networking system
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
+Package: libisl19
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 1736
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: isl
+Version: 0.19-1
+Replaces: libisl-dbg (<< 0.19)
+Depends: libc6 (>= 2.14), libgmp10
+Breaks: libisl-dbg (<< 0.19)
+Description: manipulating sets and relations of integer points bounded by linear constraints
+ isl is a library for manipulating sets and relations of integer points
+ bounded by linear constraints. Supported operations on sets include
+ intersection, union, set difference, emptiness check, convex hull,
+ (integer) affine hull, integer projection, and computing the lexicographic
+ minimum using parametric integer programming. It also includes an ILP solver
+ based on generalized basis reduction.
+ .
+ This package contains the runtime library.
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Homepage: http://isl.gforge.inria.fr/
+
+Package: binutils-x86-64-linux-gnu
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 11714
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: binutils
+Version: 2.30-21ubuntu1~18.04.3
+Replaces: binutils (<< 2.29-6)
+Depends: binutils-common (= 2.30-21ubuntu1~18.04.3), libbinutils (= 2.30-21ubuntu1~18.04.3), libc6 (>= 2.27), zlib1g (>= 1:1.1.4)
+Suggests: binutils-doc (= 2.30-21ubuntu1~18.04.3)
+Breaks: binutils (<< 2.29-6)
+Description: GNU binary utilities, for x86-64-linux-gnu target
+ This package provides GNU assembler, linker and binary utilities
+ for the x86-64-linux-gnu target.
+ .
+ You don't need this package unless you plan to cross-compile programs
+ for x86-64-linux-gnu and x86-64-linux-gnu is not your native platform.
+Homepage: https://www.gnu.org/software/binutils/
+Original-Maintainer: Matthias Klose <doko@debian.org>
 

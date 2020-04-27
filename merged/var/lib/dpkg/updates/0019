@@ -1,7 +1,0 @@
-Package: readline-common
-Status: install reinstreq half-installed
-Priority: important
-Section: utils
-Architecture: all
-Multi-Arch: foreign
-Version: 7.0-3

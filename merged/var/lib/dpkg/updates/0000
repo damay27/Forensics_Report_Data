@@ -1,6 +1,0 @@
-Package: liblocale-gettext-perl
-Status: install reinstreq half-installed
-Priority: required
-Section: perl
-Architecture: amd64
-Version: 1.07-3build2
