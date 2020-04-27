@@ -164,6 +164,25 @@ Description: support library providing __atomic built-in functions
 Homepage: http://gcc.gnu.org/
 Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 
+Package: libapr1
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 260
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: apr
+Version: 1.6.3-2
+Depends: libc6 (>= 2.15), libuuid1 (>= 2.16)
+Conflicts: libapr1.0
+Description: Apache Portable Runtime Library
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Homepage: http://apr.apache.org/
+
 Package: cpp
 Status: install ok installed
 Priority: optional
@@ -466,6 +485,45 @@ Description: command-line interface parsing library
 Homepage: http://e2fsprogs.sourceforge.net
 Original-Maintainer: Theodore Y. Ts'o <tytso@mit.edu>
 
+Package: libexpat1
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 439
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: expat
+Version: 2.2.5-3ubuntu0.2
+Depends: libc6 (>= 2.25)
+Conflicts: wink (<= 1.5.1060-4)
+Description: XML parsing C library - runtime library
+ This package contains the runtime, shared library of expat, the C
+ library for parsing XML. Expat is a stream-oriented parser in
+ which an application registers handlers for things the parser
+ might find in the XML document (like start tags).
+Homepage: https://libexpat.github.io/
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+
+Package: libicu60
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 31074
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: icu
+Version: 60.2-3ubuntu3.1
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Breaks: openttd (<= 1.7.1-1)
+Description: International Components for Unicode
+ ICU is a C++ and C library that provides robust and full-featured
+ Unicode and locale support.  This package contains the runtime
+ libraries for ICU.
+Homepage: http://www.icu-project.org
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+
 Package: libcc1-0
 Status: install ok installed
 Priority: optional
@@ -599,6 +657,185 @@ Description: GNU grep, egrep and fgrep
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Homepage: http://www.gnu.org/software/grep/
 
+Package: apache2
+Status: install ok unpacked
+Priority: optional
+Section: httpd
+Installed-Size: 522
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 2.4.29-1ubuntu4.13
+Replaces: apache2.2-bin, apache2.2-common
+Provides: httpd, httpd-cgi
+Depends: lsb-base, procps, perl, mime-support, apache2-bin (= 2.4.29-1ubuntu4.13), apache2-utils (= 2.4.29-1ubuntu4.13), apache2-data (= 2.4.29-1ubuntu4.13), perl:any
+Pre-Depends: dpkg (>= 1.17.14)
+Recommends: ssl-cert
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, ufw
+Conflicts: apache2.2-bin, apache2.2-common
+Conffiles:
+ /etc/apache2/apache2.conf newconffile
+ /etc/apache2/conf-available/charset.conf newconffile
+ /etc/apache2/conf-available/localized-error-pages.conf newconffile
+ /etc/apache2/conf-available/other-vhosts-access-log.conf newconffile
+ /etc/apache2/conf-available/security.conf newconffile
+ /etc/apache2/conf-available/serve-cgi-bin.conf newconffile
+ /etc/apache2/envvars newconffile
+ /etc/apache2/magic newconffile
+ /etc/apache2/mods-available/access_compat.load newconffile
+ /etc/apache2/mods-available/actions.conf newconffile
+ /etc/apache2/mods-available/actions.load newconffile
+ /etc/apache2/mods-available/alias.conf newconffile
+ /etc/apache2/mods-available/alias.load newconffile
+ /etc/apache2/mods-available/allowmethods.load newconffile
+ /etc/apache2/mods-available/asis.load newconffile
+ /etc/apache2/mods-available/auth_basic.load newconffile
+ /etc/apache2/mods-available/auth_digest.load newconffile
+ /etc/apache2/mods-available/auth_form.load newconffile
+ /etc/apache2/mods-available/authn_anon.load newconffile
+ /etc/apache2/mods-available/authn_core.load newconffile
+ /etc/apache2/mods-available/authn_dbd.load newconffile
+ /etc/apache2/mods-available/authn_dbm.load newconffile
+ /etc/apache2/mods-available/authn_file.load newconffile
+ /etc/apache2/mods-available/authn_socache.load newconffile
+ /etc/apache2/mods-available/authnz_fcgi.load newconffile
+ /etc/apache2/mods-available/authnz_ldap.load newconffile
+ /etc/apache2/mods-available/authz_core.load newconffile
+ /etc/apache2/mods-available/authz_dbd.load newconffile
+ /etc/apache2/mods-available/authz_dbm.load newconffile
+ /etc/apache2/mods-available/authz_groupfile.load newconffile
+ /etc/apache2/mods-available/authz_host.load newconffile
+ /etc/apache2/mods-available/authz_owner.load newconffile
+ /etc/apache2/mods-available/authz_user.load newconffile
+ /etc/apache2/mods-available/autoindex.conf newconffile
+ /etc/apache2/mods-available/autoindex.load newconffile
+ /etc/apache2/mods-available/buffer.load newconffile
+ /etc/apache2/mods-available/cache.load newconffile
+ /etc/apache2/mods-available/cache_disk.conf newconffile
+ /etc/apache2/mods-available/cache_disk.load newconffile
+ /etc/apache2/mods-available/cache_socache.load newconffile
+ /etc/apache2/mods-available/cern_meta.load newconffile
+ /etc/apache2/mods-available/cgi.load newconffile
+ /etc/apache2/mods-available/cgid.conf newconffile
+ /etc/apache2/mods-available/cgid.load newconffile
+ /etc/apache2/mods-available/charset_lite.load newconffile
+ /etc/apache2/mods-available/data.load newconffile
+ /etc/apache2/mods-available/dav.load newconffile
+ /etc/apache2/mods-available/dav_fs.conf newconffile
+ /etc/apache2/mods-available/dav_fs.load newconffile
+ /etc/apache2/mods-available/dav_lock.load newconffile
+ /etc/apache2/mods-available/dbd.load newconffile
+ /etc/apache2/mods-available/deflate.conf newconffile
+ /etc/apache2/mods-available/deflate.load newconffile
+ /etc/apache2/mods-available/dialup.load newconffile
+ /etc/apache2/mods-available/dir.conf newconffile
+ /etc/apache2/mods-available/dir.load newconffile
+ /etc/apache2/mods-available/dump_io.load newconffile
+ /etc/apache2/mods-available/echo.load newconffile
+ /etc/apache2/mods-available/env.load newconffile
+ /etc/apache2/mods-available/expires.load newconffile
+ /etc/apache2/mods-available/ext_filter.load newconffile
+ /etc/apache2/mods-available/file_cache.load newconffile
+ /etc/apache2/mods-available/filter.load newconffile
+ /etc/apache2/mods-available/headers.load newconffile
+ /etc/apache2/mods-available/heartbeat.load newconffile
+ /etc/apache2/mods-available/heartmonitor.load newconffile
+ /etc/apache2/mods-available/http2.load newconffile
+ /etc/apache2/mods-available/ident.load newconffile
+ /etc/apache2/mods-available/imagemap.load newconffile
+ /etc/apache2/mods-available/include.load newconffile
+ /etc/apache2/mods-available/info.conf newconffile
+ /etc/apache2/mods-available/info.load newconffile
+ /etc/apache2/mods-available/lbmethod_bybusyness.load newconffile
+ /etc/apache2/mods-available/lbmethod_byrequests.load newconffile
+ /etc/apache2/mods-available/lbmethod_bytraffic.load newconffile
+ /etc/apache2/mods-available/lbmethod_heartbeat.load newconffile
+ /etc/apache2/mods-available/ldap.conf newconffile
+ /etc/apache2/mods-available/ldap.load newconffile
+ /etc/apache2/mods-available/log_debug.load newconffile
+ /etc/apache2/mods-available/log_forensic.load newconffile
+ /etc/apache2/mods-available/lua.load newconffile
+ /etc/apache2/mods-available/macro.load newconffile
+ /etc/apache2/mods-available/mime.conf newconffile
+ /etc/apache2/mods-available/mime.load newconffile
+ /etc/apache2/mods-available/mime_magic.conf newconffile
+ /etc/apache2/mods-available/mime_magic.load newconffile
+ /etc/apache2/mods-available/mpm_event.conf newconffile
+ /etc/apache2/mods-available/mpm_event.load newconffile
+ /etc/apache2/mods-available/mpm_prefork.conf newconffile
+ /etc/apache2/mods-available/mpm_prefork.load newconffile
+ /etc/apache2/mods-available/mpm_worker.conf newconffile
+ /etc/apache2/mods-available/mpm_worker.load newconffile
+ /etc/apache2/mods-available/negotiation.conf newconffile
+ /etc/apache2/mods-available/negotiation.load newconffile
+ /etc/apache2/mods-available/proxy.conf newconffile
+ /etc/apache2/mods-available/proxy.load newconffile
+ /etc/apache2/mods-available/proxy_ajp.load newconffile
+ /etc/apache2/mods-available/proxy_balancer.conf newconffile
+ /etc/apache2/mods-available/proxy_balancer.load newconffile
+ /etc/apache2/mods-available/proxy_connect.load newconffile
+ /etc/apache2/mods-available/proxy_express.load newconffile
+ /etc/apache2/mods-available/proxy_fcgi.load newconffile
+ /etc/apache2/mods-available/proxy_fdpass.load newconffile
+ /etc/apache2/mods-available/proxy_ftp.conf newconffile
+ /etc/apache2/mods-available/proxy_ftp.load newconffile
+ /etc/apache2/mods-available/proxy_hcheck.load newconffile
+ /etc/apache2/mods-available/proxy_html.conf newconffile
+ /etc/apache2/mods-available/proxy_html.load newconffile
+ /etc/apache2/mods-available/proxy_http.load newconffile
+ /etc/apache2/mods-available/proxy_http2.load newconffile
+ /etc/apache2/mods-available/proxy_scgi.load newconffile
+ /etc/apache2/mods-available/proxy_wstunnel.load newconffile
+ /etc/apache2/mods-available/ratelimit.load newconffile
+ /etc/apache2/mods-available/reflector.load newconffile
+ /etc/apache2/mods-available/remoteip.load newconffile
+ /etc/apache2/mods-available/reqtimeout.conf newconffile
+ /etc/apache2/mods-available/reqtimeout.load newconffile
+ /etc/apache2/mods-available/request.load newconffile
+ /etc/apache2/mods-available/rewrite.load newconffile
+ /etc/apache2/mods-available/sed.load newconffile
+ /etc/apache2/mods-available/session.load newconffile
+ /etc/apache2/mods-available/session_cookie.load newconffile
+ /etc/apache2/mods-available/session_crypto.load newconffile
+ /etc/apache2/mods-available/session_dbd.load newconffile
+ /etc/apache2/mods-available/setenvif.conf newconffile
+ /etc/apache2/mods-available/setenvif.load newconffile
+ /etc/apache2/mods-available/slotmem_plain.load newconffile
+ /etc/apache2/mods-available/slotmem_shm.load newconffile
+ /etc/apache2/mods-available/socache_dbm.load newconffile
+ /etc/apache2/mods-available/socache_memcache.load newconffile
+ /etc/apache2/mods-available/socache_shmcb.load newconffile
+ /etc/apache2/mods-available/speling.load newconffile
+ /etc/apache2/mods-available/ssl.conf newconffile
+ /etc/apache2/mods-available/ssl.load newconffile
+ /etc/apache2/mods-available/status.conf newconffile
+ /etc/apache2/mods-available/status.load newconffile
+ /etc/apache2/mods-available/substitute.load newconffile
+ /etc/apache2/mods-available/suexec.load newconffile
+ /etc/apache2/mods-available/unique_id.load newconffile
+ /etc/apache2/mods-available/userdir.conf newconffile
+ /etc/apache2/mods-available/userdir.load newconffile
+ /etc/apache2/mods-available/usertrack.load newconffile
+ /etc/apache2/mods-available/vhost_alias.load newconffile
+ /etc/apache2/mods-available/xml2enc.load newconffile
+ /etc/apache2/ports.conf newconffile
+ /etc/apache2/sites-available/000-default.conf newconffile
+ /etc/apache2/sites-available/default-ssl.conf newconffile
+ /etc/cron.daily/apache2 newconffile
+ /etc/default/apache-htcacheclean newconffile
+ /etc/init.d/apache-htcacheclean newconffile
+ /etc/init.d/apache2 newconffile
+ /etc/logrotate.d/apache2 newconffile
+ /etc/ufw/applications.d/apache2-utils.ufw.profile newconffile
+Description: Apache HTTP Server
+ The Apache HTTP Server Project's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ Installing this package results in a full installation, including the
+ configuration files, init scripts and support scripts.
+Homepage: http://httpd.apache.org/
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+
 Package: base-passwd
 Essential: yes
 Status: install ok installed
@@ -617,6 +854,26 @@ Description: Debian base system master password and group files
  (/etc/passwd and /etc/group), containing the Debian-allocated user and
  group IDs. The update-passwd tool is provided to keep the system databases
  synchronized with these master files.
+
+Package: libnghttp2-14
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 201
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: nghttp2
+Version: 1.30.0-1ubuntu1
+Depends: libc6 (>= 2.14)
+Description: library implementing HTTP/2 protocol (shared library)
+ This is an implementation of the Hypertext Transfer Protocol version
+ 2 in C. The framing layer of HTTP/2 is implemented as a reusable C
+ library.
+ .
+ This package installs a shared library.
+Homepage: https://nghttp2.org/
+Original-Maintainer: Tomasz Buchert <tomasz@debian.org>
 
 Package: liblz4-1
 Status: install ok installed
@@ -659,6 +916,32 @@ Description: Miscellaneous utilities specific to Debian
  add-shell installkernel ischroot remove-shell run-parts savelog
  tempfile which
 Original-Maintainer: Clint Adams <clint@debian.org>
+
+Package: mime-support
+Status: install ok unpacked
+Priority: standard
+Section: net
+Installed-Size: 111
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 3.60ubuntu1
+Recommends: bzip2, file, xz-utils
+Conffiles:
+ /etc/mime.types newconffile
+ /etc/mailcap.order newconffile
+Description: MIME files 'mime.types' & 'mailcap', and support programs
+ As these files can be used by all MIME compliant programs, they
+ have been moved into their own package that others can depend upon.
+ .
+ Other packages add themselves as viewers/editors/composers/etc by
+ using the provided "update-mime" program.
+ .
+ In addition, the commands "see", "edit", "compose", and "print"
+ will display, alter, create, and print (respectively) any file using
+ a program determined from the entries in the mime.types and mailcap
+ files.
+Original-Maintainer: Mime-Support Maintainers <mime-support@plessy.org>
 
 Package: libwind0-heimdal
 Status: install ok installed
@@ -759,6 +1042,29 @@ Description: shared libraries for terminal handling (wide character support)
 Homepage: https://invisible-island.net/ncurses/
 Original-Maintainer: Craig Small <csmall@debian.org>
 
+Package: libaprutil1-dbd-sqlite3
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 47
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: apr-util
+Version: 1.6.1-2
+Depends: libaprutil1 (= 1.6.1-2), libc6 (>= 2.4), libsqlite3-0 (>= 3.5.9)
+Description: Apache Portable Runtime Utility Library - SQLite3 Driver
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+ .
+ This package contains the SQLite3 database driver.
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Homepage: http://apr.apache.org/
+
 Package: bash
 Essential: yes
 Status: install ok installed
@@ -852,7 +1158,7 @@ Homepage: http://www.oracle.com/technetwork/database/database-technologies/berke
 Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
 
 Package: build-essential
-Status: install ok unpacked
+Status: install ok installed
 Priority: optional
 Section: devel
 Installed-Size: 20
@@ -999,6 +1305,34 @@ Description: compression library - runtime
  in gzip and PKZIP.  This package includes the shared library.
 Homepage: http://zlib.net/
 Original-Maintainer: Mark Brown <broonie@debian.org>
+
+Package: apache2-utils
+Status: install ok unpacked
+Priority: optional
+Section: httpd
+Installed-Size: 327
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: apache2
+Version: 2.4.29-1ubuntu4.13
+Depends: libapr1 (>= 1.4.8-2~), libaprutil1 (>= 1.5.0), libc6 (>= 2.14), libssl1.1 (>= 1.1.0)
+Description: Apache HTTP Server (utility programs for web servers)
+ Provides some add-on programs useful for any web server.  These include:
+  - ab (Apache benchmark tool)
+  - fcgistarter (Start a FastCGI program)
+  - logresolve (Resolve IP addresses to hostnames in logfiles)
+  - htpasswd (Manipulate basic authentication files)
+  - htdigest (Manipulate digest authentication files)
+  - htdbm (Manipulate basic authentication files in DBM format, using APR)
+  - htcacheclean (Clean up the disk cache)
+  - rotatelogs (Periodically stop writing to a logfile and open a new one)
+  - split-logfile (Split a single log including multiple vhosts)
+  - checkgid (Checks whether the caller can setgid to the specified group)
+  - check_forensic (Extract mod_log_forensic output from Apache log files)
+  - httxt2dbm (Generate dbm files for use with RewriteMap)
+Homepage: http://httpd.apache.org/
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
 
 Package: hostname
 Essential: yes
@@ -1226,7 +1560,7 @@ Homepage: https://www.cyrusimap.org/
 Original-Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
 
 Package: gnupg
-Status: install ok unpacked
+Status: install ok installed
 Priority: optional
 Section: utils
 Installed-Size: 362
@@ -1393,6 +1727,30 @@ Description: Cyrus SASL - authentication abstraction library
 Homepage: https://www.cyrusimap.org/
 Original-Maintainer: Debian Cyrus SASL Team <pkg-cyrus-sasl2-debian-devel@lists.alioth.debian.org>
 
+Package: apache2-bin
+Status: install ok unpacked
+Priority: optional
+Section: httpd
+Installed-Size: 4022
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: apache2
+Version: 2.4.29-1ubuntu4.13
+Provides: apache2-api-20120211, apache2-api-20120211-openssl1.1
+Depends: libapr1 (>= 1.6.2), libaprutil1 (>= 1.6.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libc6 (>= 2.14), libldap-2.4-2 (>= 2.4.7), liblua5.2-0, libnghttp2-14 (>= 1.15.0), libpcre3, libssl1.1 (>= 1.1.1), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4), perl:any
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom
+Breaks: gridsite (<< 3.0.0~20170225gitd51b2fd-1~), libapache2-mod-dacs (<= 1.4.38a-2)
+Description: Apache HTTP Server (modules and other binary files)
+ The Apache HTTP Server Project's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ This package contains the binaries only and does not set up a working
+ web-server instance. Install the "apache2" package to get a fully working
+ instance.
+Homepage: http://httpd.apache.org/
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+
 Package: libsystemd0
 Status: install ok installed
 Priority: optional
@@ -1546,6 +1904,26 @@ Description: GNU C Library: Shared libraries
 Homepage: https://www.gnu.org/software/libc/libc.html
 Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 
+Package: apache2-data
+Status: install ok unpacked
+Priority: optional
+Section: httpd
+Installed-Size: 870
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: apache2
+Version: 2.4.29-1ubuntu4.13
+Description: Apache HTTP Server (common files)
+ The Apache HTTP Server Project's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ This package contains architecture-independent common files such as icons,
+ error pages and static index files.
+Homepage: http://httpd.apache.org/
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+
 Package: libfdisk1
 Status: install ok installed
 Priority: optional
@@ -1561,6 +1939,25 @@ Description: fdisk partitioning library
  The libfdisk library is used for manipulating partition tables. It is
  the core of the fdisk, cfdisk, and sfdisk tools.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
+
+Package: ssl-cert
+Status: install ok unpacked
+Priority: optional
+Section: utils
+Installed-Size: 63
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 1.0.39
+Depends: debconf (>= 0.5) | debconf-2.0, openssl (>= 0.9.8g-9), adduser
+Suggests: openssl-blacklist
+Description: simple debconf wrapper for OpenSSL
+ This package enables unattended installs of packages that
+ need to create SSL certificates.
+ .
+ It is a simple wrapper for OpenSSL's certificate request utility that
+ feeds it with the correct user variables.
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
 
 Package: libroken18-heimdal
 Status: install ok installed
@@ -1754,7 +2151,7 @@ Homepage: http://gnu.org/software/coreutils
 Original-Maintainer: Michael Stone <mstone@debian.org>
 
 Package: gpg-wks-client
-Status: install ok unpacked
+Status: install ok installed
 Priority: optional
 Section: utils
 Installed-Size: 251
@@ -1781,6 +2178,24 @@ Description: GNU privacy guard - Web Key Service client
  For more information see: https://wiki.gnupg.org/WKS
 Homepage: https://www.gnupg.org/
 Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+
+Package: file
+Status: install ok unpacked
+Priority: standard
+Section: utils
+Installed-Size: 80
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1:5.32-2ubuntu0.3
+Depends: libc6 (>= 2.4), libmagic1 (= 1:5.32-2ubuntu0.3)
+Description: Recognize the type of data in a file using "magic" numbers
+ The file command is "a file type guesser", a command-line tool that
+ tells you in words what kind of data a file contains.
+ .
+ This package contains the file program itself.
+Homepage: http://www.darwinsys.com/file/
+Original-Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
 
 Package: fakeroot
 Status: install ok installed
@@ -1941,6 +2356,29 @@ Description: libkmod shared library
  listing of kernel modules.
 Original-Maintainer: Marco d'Itri <md@linux.it>
 
+Package: libxml2
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 1950
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Version: 2.9.4+dfsg1-6.1ubuntu1.3
+Depends: libc6 (>= 2.15), libicu60 (>= 60.1-1~), liblzma5 (>= 5.1.1alpha+20120614), zlib1g (>= 1:1.2.3.3)
+Description: GNOME XML library
+ XML is a metalanguage to let you design your own markup language.
+ A regular markup language defines a way to describe information in
+ a certain class of documents (eg HTML). XML lets you define your
+ own customized markup languages for many classes of document. It
+ can do this because it's written in SGML, the international standard
+ metalanguage for markup languages.
+ .
+ This package provides a library providing an extensive API to handle
+ such XML data files.
+Homepage: http://xmlsoft.org
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+
 Package: libblkid1
 Status: install ok installed
 Priority: optional
@@ -2024,6 +2462,26 @@ Description: Manage ASN.1 structures (runtime)
 Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
 Homepage: http://www.gnu.org/software/libtasn1/
 
+Package: libmagic-mgc
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 4892
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Source: file
+Version: 1:5.32-2ubuntu0.3
+Replaces: libmagic1 (<< 1:5.28-4~)
+Breaks: libmagic1 (<< 1:5.28-4~)
+Description: File type determination library using "magic" numbers (compiled magic file)
+ This package provides the compiled magic file "magic.mgc". It has
+ been separated from libmagic1 in order to meet the multiarch
+ requirements without breaking applications that expect this file
+ at its absolute path.
+Homepage: http://www.darwinsys.com/file/
+Original-Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
+
 Package: gnupg-l10n
 Status: install ok installed
 Priority: optional
@@ -2076,6 +2534,27 @@ Description: high-quality block-sorting file compressor - utilities
  predecessor, bzip (.bz).
 Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+
+Package: libmagic1
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: file
+Version: 1:5.32-2ubuntu0.3
+Depends: libc6 (>= 2.15), zlib1g (>= 1:1.1.4), libmagic-mgc (= 1:5.32-2ubuntu0.3)
+Suggests: file
+Conffiles:
+ /etc/magic newconffile
+ /etc/magic.mime newconffile
+Description: Recognize the type of data in a file using "magic" numbers - library
+ This library can be used to classify files according to magic number
+ tests. It implements the core functionality of the file command.
+Homepage: http://www.darwinsys.com/file/
+Original-Maintainer: Christoph Biedl <debian.axhn@manchmal.in-ulm.de>
 
 Package: lsb-base
 Status: install ok installed
@@ -2819,6 +3298,28 @@ Description: XZ-format compression utilities
 Original-Maintainer: Jonathan Nieder <jrnieder@gmail.com>
 Homepage: http://tukaani.org/xz/
 
+Package: libaprutil1
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 258
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: apr-util
+Version: 1.6.1-2
+Depends: libapr1 (>= 1.6.2), libc6 (>= 2.25), libdb5.3, libexpat1 (>= 2.0.1), libgdbm5 (>= 1.14), libssl1.1 (>= 1.1.0)
+Breaks: libapr1 (<< 1.4.8-2~)
+Description: Apache Portable Runtime Utility Library
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Homepage: http://apr.apache.org/
+
 Package: libheimbase1-heimdal
 Status: install ok installed
 Priority: optional
@@ -3041,6 +3542,35 @@ Description: Debian package management system
  For Debian package development tools, install dpkg-dev.
 Homepage: https://wiki.debian.org/Teams/Dpkg
 Original-Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+
+Package: openssl
+Status: install ok unpacked
+Priority: optional
+Section: utils
+Installed-Size: 1222
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.1.1-1ubuntu2.1~18.04.5
+Depends: libc6 (>= 2.15), libssl1.1 (>= 1.1.1)
+Suggests: ca-certificates
+Conffiles:
+ /etc/ssl/openssl.cnf newconffile
+Description: Secure Sockets Layer toolkit - cryptographic utility
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It contains the general-purpose command line binary /usr/bin/openssl,
+ useful for cryptographic operations such as:
+  * creating RSA, DH, and DSA key parameters;
+  * creating X.509 certificates, CSRs, and CRLs;
+  * calculating message digests;
+  * encrypting and decrypting with ciphers;
+  * testing SSL/TLS clients and servers;
+  * handling S/MIME signed or encrypted mail.
+Homepage: https://www.openssl.org/
+Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
 
 Package: gnupg-utils
 Status: install ok installed
@@ -3408,6 +3938,29 @@ Description: GNU C Library: Development binaries
  development package.
 Homepage: https://www.gnu.org/software/libc/libc.html
 Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+
+Package: liblua5.2-0
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 414
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: lua5.2
+Version: 5.2.4-1.1build1
+Depends: libc6 (>= 2.14), libstdc++6 (>= 4.1.1)
+Description: Shared library for the Lua interpreter version 5.2
+ Lua is a powerful, light-weight programming language designed for extending
+ applications.  The language engine is accessible as a library, having a C
+ API which allows the application to exchange data with Lua programs and also
+ to extend Lua with C functions.  Lua is also used as a general-purpose,
+ stand-alone language through the simple command line interpreter provided.
+ .
+ This package contains runtime libraries.  You shouldn't need to install it
+ explicitly.
+Original-Maintainer: Enrico Tassi <gareuselesinge@debian.org>
+Homepage: http://www.lua.org
 
 Package: libkrb5-26-heimdal
 Status: install ok installed
@@ -3992,6 +4545,29 @@ Depends: libc6 (>= 2.25)
 Description: smart column output alignment library
  This smart column output alignment library is used by fdisk utilities.
 Original-Maintainer: LaMont Jones <lamont@debian.org>
+
+Package: libaprutil1-ldap
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 39
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: apr-util
+Version: 1.6.1-2
+Depends: libaprutil1 (= 1.6.1-2), libc6 (>= 2.4), libldap-2.4-2 (>= 2.4.7)
+Description: Apache Portable Runtime Utility Library - LDAP Driver
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+ .
+ This package contains the LDAP driver.
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Homepage: http://apr.apache.org/
 
 Package: netbase
 Status: install ok installed

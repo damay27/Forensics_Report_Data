@@ -164,3 +164,19 @@ Name: libssl1.1/restart-services
 Template: libssl1.1/restart-services
 Owners: libssl1.1:amd64
 
+Name: make-ssl-cert/altname
+Template: make-ssl-cert/altname
+Owners: ssl-cert
+
+Name: make-ssl-cert/hostname
+Template: make-ssl-cert/hostname
+Owners: ssl-cert
+
+Name: make-ssl-cert/title
+Template: make-ssl-cert/title
+Owners: ssl-cert
+
+Name: make-ssl-cert/vulnerable_prng
+Template: make-ssl-cert/vulnerable_prng
+Owners: ssl-cert
+
