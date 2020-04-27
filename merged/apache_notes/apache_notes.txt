@@ -1,0 +1,2 @@
+Install apache with the following command:
+	apt install apache2
