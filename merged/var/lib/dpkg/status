@@ -255,6 +255,32 @@ Description: low level cryptographic library (symmetric and one-way cryptos)
 Original-Maintainer: Magnus Holmgren <holmgren@debian.org>
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
 
+Package: kmod
+Status: install ok installed
+Priority: important
+Section: admin
+Installed-Size: 232
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 24-1ubuntu3.2
+Depends: libc6 (>= 2.17), libkmod2 (= 24-1ubuntu3.2), lsb-base
+Breaks: oss-compat (= 4)
+Conffiles:
+ /etc/depmod.d/ubuntu.conf 7c8439ef36b12e5f226b5dbfa20b8c2d
+ /etc/init.d/kmod 82698019c962069b438bd2a82d9fa1e7
+ /etc/modprobe.d/blacklist-ath_pci.conf d1da9bb08c2b0f56f3be93fd0e37946b
+ /etc/modprobe.d/blacklist-firewire.conf 9cc07a17e8e64f9cd35ff59c29debe69
+ /etc/modprobe.d/blacklist-framebuffer.conf 662be7eaefa6b67fcddb5d90981e1c29
+ /etc/modprobe.d/blacklist-rare-network.conf 8fb4b96124e461f53adceba9ca91f09a
+ /etc/modprobe.d/blacklist.conf 46378b3789cf6d2ea9da9276e1106f2c
+ /etc/modprobe.d/iwlwifi.conf f27bc645e93e20c8e532325d190ac8ee
+Description: tools for managing Linux kernel modules
+ This package contains a set of programs for loading, inserting, and
+ removing kernel modules for Linux.
+ It replaces module-init-tools.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
 Package: libattr1
 Status: install ok installed
 Priority: required
@@ -1018,6 +1044,22 @@ Description: high-quality block-sorting file compressor library - runtime
 Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 
+Package: libkmod2
+Status: install ok installed
+Priority: important
+Section: libs
+Installed-Size: 120
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: kmod
+Version: 24-1ubuntu3.2
+Depends: libc6 (>= 2.17)
+Description: libkmod shared library
+ This library provides an API for insertion, removal, configuration and
+ listing of kernel modules.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
 Package: libblkid1
 Status: install ok installed
 Priority: optional
@@ -1089,6 +1131,27 @@ Description: high-quality block-sorting file compressor - utilities
 Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 
+Package: lsb-base
+Status: install ok installed
+Priority: required
+Section: misc
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Source: lsb
+Version: 9.20170808ubuntu1
+Description: Linux Standard Base init script functionality
+ The Linux Standard Base (http://www.linuxbase.org/) is a standard
+ core system that third-party applications written for Linux can
+ depend upon.
+ .
+ This package only includes the init-functions shell library, which
+ may be used by other packages' initialization scripts for console
+ logging and other purposes.
+Homepage: https://wiki.linuxfoundation.org/lsb/start
+Original-Maintainer: Debian LSB Team <debian-lsb@lists.debian.org>
+
 Package: libhogweed4
 Status: install ok installed
 Priority: optional
@@ -1118,27 +1181,6 @@ Description: low level cryptographic library (public-key cryptos)
  their large integer computations.
 Original-Maintainer: Magnus Holmgren <holmgren@debian.org>
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
-
-Package: lsb-base
-Status: install ok installed
-Priority: required
-Section: misc
-Installed-Size: 58
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Multi-Arch: foreign
-Source: lsb
-Version: 9.20170808ubuntu1
-Description: Linux Standard Base init script functionality
- The Linux Standard Base (http://www.linuxbase.org/) is a standard
- core system that third-party applications written for Linux can
- depend upon.
- .
- This package only includes the init-functions shell library, which
- may be used by other packages' initialization scripts for console
- logging and other purposes.
-Homepage: https://wiki.linuxfoundation.org/lsb/start
-Original-Maintainer: Debian LSB Team <debian-lsb@lists.debian.org>
 
 Package: procps
 Status: install ok installed

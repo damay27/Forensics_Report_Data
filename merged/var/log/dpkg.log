@@ -2973,3 +2973,33 @@
 2020-04-27 03:29:02 status unpacked nano:amd64 2.9.3-2
 2020-04-27 03:29:02 status half-configured nano:amd64 2.9.3-2
 2020-04-27 03:29:02 status installed nano:amd64 2.9.3-2
+2020-04-27 03:33:10 startup archives unpack
+2020-04-27 03:33:10 install libkmod2:amd64 <none> 24-1ubuntu3.2
+2020-04-27 03:33:10 status triggers-pending libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:33:10 status half-installed libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 install kmod:amd64 <none> 24-1ubuntu3.2
+2020-04-27 03:33:10 status half-installed kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 startup packages configure
+2020-04-27 03:33:10 configure libkmod2:amd64 24-1ubuntu3.2 <none>
+2020-04-27 03:33:10 status unpacked libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status half-configured libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status installed libkmod2:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 configure kmod:amd64 24-1ubuntu3.2 <none>
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:10 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:11 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:11 status unpacked kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:11 status half-configured kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:11 status installed kmod:amd64 24-1ubuntu3.2
+2020-04-27 03:33:11 trigproc libc-bin:amd64 2.27-3ubuntu1 <none>
+2020-04-27 03:33:11 status half-configured libc-bin:amd64 2.27-3ubuntu1
+2020-04-27 03:33:11 status installed libc-bin:amd64 2.27-3ubuntu1

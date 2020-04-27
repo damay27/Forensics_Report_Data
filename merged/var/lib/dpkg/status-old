@@ -255,6 +255,32 @@ Description: low level cryptographic library (symmetric and one-way cryptos)
 Original-Maintainer: Magnus Holmgren <holmgren@debian.org>
 Homepage: http://www.lysator.liu.se/~nisse/nettle/
 
+Package: kmod
+Status: install ok unpacked
+Priority: important
+Section: admin
+Installed-Size: 232
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 24-1ubuntu3.2
+Depends: libc6 (>= 2.17), libkmod2 (= 24-1ubuntu3.2), lsb-base
+Breaks: oss-compat (= 4)
+Conffiles:
+ /etc/depmod.d/ubuntu.conf newconffile
+ /etc/init.d/kmod newconffile
+ /etc/modprobe.d/blacklist-ath_pci.conf newconffile
+ /etc/modprobe.d/blacklist-firewire.conf newconffile
+ /etc/modprobe.d/blacklist-framebuffer.conf newconffile
+ /etc/modprobe.d/blacklist-rare-network.conf newconffile
+ /etc/modprobe.d/blacklist.conf newconffile
+ /etc/modprobe.d/iwlwifi.conf newconffile
+Description: tools for managing Linux kernel modules
+ This package contains a set of programs for loading, inserting, and
+ removing kernel modules for Linux.
+ It replaces module-init-tools.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
 Package: libattr1
 Status: install ok installed
 Priority: required
@@ -1018,6 +1044,22 @@ Description: high-quality block-sorting file compressor library - runtime
 Homepage: http://www.bzip.org/
 Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 
+Package: libkmod2
+Status: install ok unpacked
+Priority: important
+Section: libs
+Installed-Size: 120
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: kmod
+Version: 24-1ubuntu3.2
+Depends: libc6 (>= 2.17)
+Description: libkmod shared library
+ This library provides an API for insertion, removal, configuration and
+ listing of kernel modules.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
 Package: libblkid1
 Status: install ok installed
 Priority: optional
@@ -1196,7 +1238,7 @@ Original-Maintainer: Debian GnuPG Maintainers <pkg-gnupg-maint@lists.alioth.debi
 Homepage: https://www.gnupg.org/related_software/libgpg-error/
 
 Package: nano
-Status: install ok unpacked
+Status: install ok installed
 Priority: important
 Section: editors
 Installed-Size: 760
@@ -1209,7 +1251,7 @@ Suggests: spell
 Breaks: nano-tiny (<< 2.8.6-2)
 Conflicts: pico
 Conffiles:
- /etc/nanorc newconffile
+ /etc/nanorc 6d69e5077f001dcf11ddb2d81e1c9076
 Description: small, friendly text editor inspired by Pico
  GNU nano is an easy-to-use text editor originally designed as a replacement
  for Pico, the ncurses-based editor from the non-free mailer package Pine
@@ -1391,7 +1433,7 @@ Original-Maintainer: Craig Small <csmall@debian.org>
 
 Package: libc-bin
 Essential: yes
-Status: install ok installed
+Status: install ok triggers-pending
 Priority: required
 Section: libs
 Installed-Size: 3631
@@ -1418,6 +1460,7 @@ Description: GNU C Library: Binaries
   * ldd, ldconfig: print/configure shared library dependencies
   * locale, localedef: show/generate locale definitions
   * tzselect, zdump, zic: select/dump/compile time zones
+Triggers-Pending: ldconfig
 Homepage: https://www.gnu.org/software/libc/libc.html
 Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 

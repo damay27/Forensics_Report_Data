@@ -64,3 +64,16 @@ update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz b
 update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
 update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
 Log ended: 2020-04-27  03:29:02
+
+Log started: 2020-04-27  03:33:10
+Selecting previously unselected package libkmod2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4113 files and directories currently installed.)
+Preparing to unpack .../libkmod2_24-1ubuntu3.2_amd64.deb ...
+Unpacking libkmod2:amd64 (24-1ubuntu3.2) ...
+Selecting previously unselected package kmod.
+Preparing to unpack .../kmod_24-1ubuntu3.2_amd64.deb ...
+Unpacking kmod (24-1ubuntu3.2) ...
+Setting up libkmod2:amd64 (24-1ubuntu3.2) ...
+Setting up kmod (24-1ubuntu3.2) ...
+Processing triggers for libc-bin (2.27-3ubuntu1) ...
+Log ended: 2020-04-27  03:33:11

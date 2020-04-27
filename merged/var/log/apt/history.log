@@ -26,3 +26,8 @@ Start-Date: 2020-04-27  03:29:02
 Commandline: apt install nano
 Install: nano:amd64 (2.9.3-2)
 End-Date: 2020-04-27  03:29:02
+
+Start-Date: 2020-04-27  03:33:10
+Commandline: apt install kmod
+Install: libkmod2:amd64 (24-1ubuntu3.2, automatic), kmod:amd64 (24-1ubuntu3.2)
+End-Date: 2020-04-27  03:33:11
