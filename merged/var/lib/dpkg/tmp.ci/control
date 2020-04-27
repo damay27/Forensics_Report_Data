@@ -1,0 +1,21 @@
+Package: binutils-x86-64-linux-gnu
+Source: binutils
+Version: 2.30-21ubuntu1~18.04.3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 11714
+Depends: binutils-common (= 2.30-21ubuntu1~18.04.3), libbinutils (= 2.30-21ubuntu1~18.04.3), libc6 (>= 2.27), zlib1g (>= 1:1.1.4)
+Suggests: binutils-doc (= 2.30-21ubuntu1~18.04.3)
+Breaks: binutils (<< 2.29-6)
+Replaces: binutils (<< 2.29-6)
+Section: devel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/binutils/
+Description: GNU binary utilities, for x86-64-linux-gnu target
+ This package provides GNU assembler, linker and binary utilities
+ for the x86-64-linux-gnu target.
+ .
+ You don't need this package unless you plan to cross-compile programs
+ for x86-64-linux-gnu and x86-64-linux-gnu is not your native platform.
+Original-Maintainer: Matthias Klose <doko@debian.org>

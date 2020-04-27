@@ -1,0 +1,7 @@
+Package: libreadline7
+Status: install reinstreq half-installed
+Priority: important
+Section: libs
+Architecture: amd64
+Multi-Arch: same
+Version: 7.0-3

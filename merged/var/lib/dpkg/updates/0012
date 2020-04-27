@@ -1,0 +1,24 @@
+Package: libgdbm-compat4
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: gdbm
+Version: 1.14.1-6
+Depends: libc6 (>= 2.14), libgdbm5 (>= 1.14)
+Description: GNU dbm database routines (legacy support runtime version) 
+ GNU dbm ('gdbm') is a library of database functions that use extendible
+ hashing and works similarly to the standard UNIX 'dbm' functions.
+ .
+ The basic use of 'gdbm' is to store key/data pairs in a data file, thus
+ providing a persistent version of the 'dictionary' Abstract Data Type
+ ('hash' to perl programmers).
+ .
+ This package includes library files, required to run old programs,
+ that use legacy 'dbm' interface. For new programs, please use modern
+ interface, provided by libgdbm5 and libgdbm-dev.
+Original-Maintainer: Dmitry Bogatov <KAction@gnu.org>
+Homepage: https://gnu.org/software/gdbm

@@ -1,0 +1,7 @@
+Package: libsqlite3-0
+Status: install reinstreq half-installed
+Priority: standard
+Section: libs
+Architecture: amd64
+Multi-Arch: same
+Version: 3.22.0-1ubuntu0.3

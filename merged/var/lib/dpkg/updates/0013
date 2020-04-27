@@ -1,0 +1,7 @@
+Package: libperl5.26
+Status: install reinstreq half-installed
+Priority: optional
+Section: libs
+Architecture: amd64
+Multi-Arch: same
+Version: 5.26.1-6ubuntu0.3

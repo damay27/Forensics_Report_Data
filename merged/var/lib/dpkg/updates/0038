@@ -1,0 +1,25 @@
+Package: manpages
+Status: install reinstreq unpacked
+Priority: standard
+Section: doc
+Installed-Size: 1471
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 4.15-1
+Suggests: man-browser
+Breaks: manpages-dev (<< 4.13-3)
+Description: Manual pages about using a GNU/Linux system
+ This package contains GNU/Linux manual pages for these sections:
+  4 = Devices (e.g. hd, sd).
+  5 = File formats and protocols, syntaxes of several system
+      files (e.g. wtmp, /etc/passwd, nfs).
+  7 = Conventions and standards, macro packages, etc.
+      (e.g. nroff, ascii).
+ .
+ Sections 1, 6 and 8 are provided by the respective applications. This
+ package only includes the intro man page describing the section.
+ .
+ The man pages describe syntaxes of several system files.
+Original-Maintainer: Martin Schulze <joey@debian.org>
+Homepage: https://www.kernel.org/doc/man-pages/

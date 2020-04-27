@@ -1,0 +1,17 @@
+Package: libbinutils
+Status: install ok unpacked
+Priority: optional
+Section: devel
+Installed-Size: 3006
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.30-21ubuntu1~18.04.3
+Replaces: binutils (<< 2.29-6)
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.2.0), binutils-common (= 2.30-21ubuntu1~18.04.3)
+Breaks: binutils (<< 2.29-6)
+Description: GNU binary utilities (private shared library)
+ This package includes the private shared libraries libbfd and libopcodes.
+Homepage: https://www.gnu.org/software/binutils/
+Original-Maintainer: Matthias Klose <doko@debian.org>

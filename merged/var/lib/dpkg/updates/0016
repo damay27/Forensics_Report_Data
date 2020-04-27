@@ -1,0 +1,7 @@
+Package: perl
+Status: install reinstreq half-installed
+Priority: standard
+Section: perl
+Architecture: amd64
+Multi-Arch: allowed
+Version: 5.26.1-6ubuntu0.3

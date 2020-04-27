@@ -1,0 +1,7 @@
+Package: perl-modules-5.26
+Status: install reinstreq half-installed
+Priority: standard
+Section: perl
+Architecture: all
+Multi-Arch: foreign
+Version: 5.26.1-6ubuntu0.3

@@ -1,0 +1,7 @@
+Package: binutils-common
+Status: install reinstreq half-installed
+Priority: optional
+Section: devel
+Architecture: amd64
+Multi-Arch: same
+Version: 2.30-21ubuntu1~18.04.3

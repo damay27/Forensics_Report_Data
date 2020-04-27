@@ -1,0 +1,17 @@
+Package: netbase
+Status: install reinstreq unpacked
+Priority: important
+Section: admin
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Multi-Arch: foreign
+Version: 5.4
+Conffiles:
+ /etc/protocols newconffile
+ /etc/rpc newconffile
+ /etc/services newconffile
+Description: Basic TCP/IP networking system
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking.
+Original-Maintainer: Marco d'Itri <md@linux.it>

@@ -1,0 +1,23 @@
+Package: libperl5.26
+Status: install reinstreq unpacked
+Priority: optional
+Section: libs
+Installed-Size: 21395
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Multi-Arch: same
+Source: perl
+Version: 5.26.1-6ubuntu0.3
+Replaces: libarchive-tar-perl (<= 1.38-2), libcompress-raw-bzip2-perl (<< 2.074), libcompress-raw-zlib-perl (<< 2.074), libcompress-zlib-perl (<< 2.074), libdigest-md5-perl (<< 2.55), libdigest-sha-perl (<< 5.96), libencode-perl (<< 2.94), libio-compress-base-perl (<< 2.074), libio-compress-bzip2-perl (<< 2.074), libio-compress-perl (<< 2.074), libio-compress-zlib-perl (<< 2.074), libmime-base64-perl (<< 3.15), libmodule-corelist-perl (<< 2.14-2), libstorable-perl (<< 2.62), libsys-syslog-perl (<< 0.35), libthreads-perl (<< 2.15), libthreads-shared-perl (<< 1.56), libtime-hires-perl (<< 1.9741), libtime-piece-perl (<< 1.31), perl (<< 5.22.0~), perl-base (<< 5.22.0~)
+Provides: libcompress-raw-bzip2-perl, libcompress-raw-zlib-perl, libcompress-zlib-perl, libdigest-md5-perl, libdigest-sha-perl, libencode-perl, libio-compress-base-perl, libio-compress-bzip2-perl, libio-compress-perl, libio-compress-zlib-perl, libmime-base64-perl, libstorable-perl, libsys-syslog-perl, libthreads-perl, libthreads-shared-perl, libtime-hires-perl, libtime-piece-perl, perl-cross-config
+Depends: libbz2-1.0, libc6 (>= 2.23), libdb5.3, libgdbm-compat4, libgdbm5 (>= 1.12), zlib1g (>= 1:1.2.2.3), perl-modules-5.26 (>= 5.26.1-6ubuntu0.3)
+Breaks: dh-make-perl (<< 0.73-1), ftpmirror (<< 1.96+dfsg-13), libcompress-raw-bzip2-perl (<< 2.074), libcompress-raw-zlib-perl (<< 2.074), libcompress-zlib-perl (<< 2.074), libdigest-md5-perl (<< 2.55), libdigest-sha-perl (<< 5.96), libencode-perl (<< 2.94), libhtml-template-compiled-perl (<< 0.95-1), libio-compress-base-perl (<< 2.074), libio-compress-bzip2-perl (<< 2.074), libio-compress-perl (<< 2.074), libio-compress-zlib-perl (<< 2.074), libload-perl (<< 0.20-1), libmime-base64-perl (<< 3.15), libnet-jifty-perl (<< 0.14-1), libperl-apireference-perl (<< 0.09-1), libregexp-optimizer-perl (<< 0.15-3), libsoap-lite-perl (<< 0.712-4), libstorable-perl (<< 2.62), libsys-syslog-perl (<< 0.35), libthreads-perl (<< 2.15), libthreads-shared-perl (<< 1.56), libtime-hires-perl (<< 1.9741), libtime-piece-perl (<< 1.31), libxml-parser-lite-tree-perl (<< 0.14-1), libyaml-perl (<< 0.73-1), mrtg (<< 2.16.3-3.1)
+Description: shared Perl library
+ This package contains the shared Perl library, used by applications
+ which embed a Perl interpreter.
+ .
+ It also contains the architecture-dependent parts of the standard
+ library (and depends on perl-modules-5.26 which contains the
+ architecture-independent parts).
+Homepage: http://dev.perl.org/perl5/
+Original-Maintainer: Niko Tyni <ntyni@debian.org>
